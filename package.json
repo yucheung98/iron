@@ -1,5 +1,5 @@
 {
-  "name": "forex-management",
+  "name": "iron",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -19,8 +19,10 @@
     "@angular/platform-browser": "~8.2.8",
     "@angular/platform-browser-dynamic": "~8.2.8",
     "@angular/router": "~8.2.8",
+    "echarts": "^4.7.0",
     "ng-zorro-antd": "^8.5.2",
     "ngx-cookie-service": "^3.0.3",
+    "ngx-echarts": "^4.2.2",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
