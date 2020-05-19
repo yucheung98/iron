@@ -13,13 +13,19 @@ import en from '@angular/common/locales/en';
 import {LoginComponent} from './login/login.component';
 import {WelcomeModule} from './pages/welcome/welcome.module';
 import {NgxEchartsModule} from 'ngx-echarts';
+import { ChartsModule } from '@progress/kendo-angular-charts';
+import 'hammerjs';
+import { ChargingComponent } from './pages/charging/charging.component';
+
+
 
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    ChargingComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +37,8 @@ registerLocaleData(en);
     BrowserAnimationsModule,
     ReactiveFormsModule,
     WelcomeModule,
-    NgxEchartsModule
+    NgxEchartsModule,
+    ChartsModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]

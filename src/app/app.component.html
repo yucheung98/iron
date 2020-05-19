@@ -1,4 +1,5 @@
-<nz-layout *ngIf= "isLogged; else falsyTemplate;" class="app-layout">
+<!--*ngIf= "isLogged; else falsyTemplate;"-->
+<nz-layout  class="app-layout">
   <nz-sider class="menu-sidebar"
             nzCollapsible
             nzWidth="256px"
@@ -6,69 +7,49 @@
             [(nzCollapsed)]="isCollapsed"
             [nzTrigger]="null">
     <div class="sidebar-logo">
-        <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo">
+        <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo" (click)="isCollapsed = !isCollapsed">
         <h1>钢铁钢业运营分析系统</h1>
     </div>
     <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
-<!--      <li nz-submenu nzOpen nzTitle="Dashboard" nzIcon="dashboard">-->
-<!--        <ul>-->
-<!--          <li nz-menu-item nzMatchRouter>-->
-<!--            <a routerLink="/welcome">Welcome</a>-->
-<!--          </li>-->
-<!--          <li nz-menu-item nzMatchRouter>-->
-<!--            <a>Monitor</a>-->
-<!--          </li>-->
-<!--          <li nz-menu-item nzMatchRouter>-->
-<!--            <a>Workplace</a>-->
-<!--          </li>-->
-<!--        </ul>-->
-<!--      </li>-->
      <li nz-submenu nzOpen nzTitle="管理模块" nzIcon="dashboard">
       <ul>
-      <li nz-menu-item nzMatchRouter (click)="newTab('welcome')">
-        <a routerLink="/welcome" (click)="newTab('welcome')">welcome</a>
-      </li>
-<!--      <li nz-menu-item nzMatchRouter (click)="newTab('资讯管理')">-->
-<!--        <a (click)="newTab('资讯管理')" >资讯管理</a>-->
-<!--      </li>-->
-<!--      <li nz-menu-item nzMatchRouter (click)="newTab('行情管理')">-->
-<!--        <a (click)="newTab('行情管理')">行情管理</a>-->
-<!--      </li>-->
-<!--      <li nz-menu-item nzMatchRouter (click)="newTab('预测管理')">-->
-<!--        <a (click)="newTab('预测管理')" >预测管理</a>-->
-<!--      </li>-->
+        <li nz-menu-item nzMatchRouter (click)="newTab('钢铁行业数据看板')">
+          <a routerLink="/kanban" (click)="newTab('钢铁行业数据看板')">钢铁行业数据看板</a>
+        </li>
+        <li nz-menu-item nzMatchRouter (click)="newTab('数据预测')">
+          <a routerLink="/forecast" (click)="newTab('数据预测')">数据预测</a>
+        </li>
       </ul>
     </li>
-
     </ul>
   </nz-sider>
   <nz-layout>
-    <nz-header>
-      <div class="app-header">
-        <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
-            <i class="trigger"
-               nz-icon
-               [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
-            ></i>
-        </span>
-        <img nz-dropdown [nzDropdownMenu]="menu" [nzTrigger]="'hover'" [nzPlacement]="'bottomRight'" src="../assets/img/默认头像.png" height="35" width="35" style="margin-left: 92%"/>
-        <nz-dropdown-menu #menu="nzDropdownMenu">
-          <ul nz-menu nzSelectable class="user-info">
-            <li nz-menu-item class="user-info-title" style="text-align: center">用户信息</li>
-            <li nz-menu-divider></li>
-            <li nz-menu-item>系统管理员</li>
-            <li nz-menu-item style="text-align: center">sa</li>
-            <li nz-menu-divider></li>
-            <li nz-menu-item style="text-align: center">
-              <a (click)="signOut()">
-                <img src="../assets/img/退出.png" height="16" width="16"/>
-                退出
-              </a>
-            </li>
-          </ul>
-        </nz-dropdown-menu>
-      </div>
-    </nz-header>
+<!--    <nz-header>-->
+<!--      <div class="app-header">-->
+<!--        <span class="header-trigger" (click)="isCollapsed = !isCollapsed">-->
+<!--            <i class="trigger"-->
+<!--               nz-icon-->
+<!--               [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"-->
+<!--            ></i>-->
+<!--        </span>-->
+<!--        <img nz-dropdown [nzDropdownMenu]="menu" [nzTrigger]="'hover'" [nzPlacement]="'bottomRight'" src="../assets/img/user.png" height="35" width="35" style="margin-left: 92%"/>-->
+<!--        <nz-dropdown-menu #menu="nzDropdownMenu">-->
+<!--          <ul nz-menu nzSelectable class="user-info">-->
+<!--            <li nz-menu-item class="user-info-title" style="text-align: center">用户信息</li>-->
+<!--            <li nz-menu-divider></li>-->
+<!--            <li nz-menu-item>系统管理员</li>-->
+<!--            <li nz-menu-item style="text-align: center">sa</li>-->
+<!--            <li nz-menu-divider></li>-->
+<!--            <li nz-menu-item style="text-align: center">-->
+<!--              <a (click)="signOut()">-->
+<!--                <img src="../assets/img/logout.png" height="16" width="16"/>-->
+<!--                退出-->
+<!--              </a>-->
+<!--            </li>-->
+<!--          </ul>-->
+<!--        </nz-dropdown-menu>-->
+<!--      </div>-->
+<!--    </nz-header>-->
     <nz-content>
       <div class="inner-content">
         <nz-tabset [nzType]="'card'"  [nzSelectedIndex]="index">
@@ -79,7 +60,8 @@
                 <i nz-icon nzType="close" (click)="closeTab(tab)" class="ant-tabs-close-x"></i>
               </div>
             </ng-template>
-            <app-welcome *ngIf="tab =='welcome'"></app-welcome>
+            <app-welcome *ngIf="tab =='钢铁行业数据看板'"></app-welcome>
+            <app-charging *ngIf="tab =='数据预测'"></app-charging>
           </nz-tab>
         </nz-tabset>
       </div>
