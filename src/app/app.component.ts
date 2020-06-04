@@ -38,7 +38,7 @@ export class AppComponent implements OnInit {
     console.log(hre[3]);
     if (!hre[3]) {
       this.tabs.push('钢铁行业数据看板');
-      this.router.navigateByUrl('/kanban');
+      this.router.navigateByUrl('/icon-kanban');
     }
     if (hre[3]) {
       this.tabs.push(this.loginstatus.tab);
@@ -77,7 +77,7 @@ export class AppComponent implements OnInit {
   // 退出登录
   signOut() {
     sessionStorage.clear();
-    this.router.navigateByUrl('/kanban');
+    this.router.navigateByUrl('/icon-kanban');
     this.isLogged = false;
   }
 

@@ -16,6 +16,8 @@ import {NgxEchartsModule} from 'ngx-echarts';
 import { ChartsModule } from '@progress/kendo-angular-charts';
 import 'hammerjs';
 import { ChargingComponent } from './pages/charging/charging.component';
+import { EconomicsComponent } from './pages/economics/economics.component';
+import { EcoForecastComponent } from './pages/eco-forecast/eco-forecast.component';
 
 
 
@@ -25,7 +27,9 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     LoginComponent,
-    ChargingComponent
+    ChargingComponent,
+    EconomicsComponent,
+    EcoForecastComponent
   ],
   imports: [
     BrowserModule,
