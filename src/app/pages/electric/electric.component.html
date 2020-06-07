@@ -1,0 +1,76 @@
+<div style="padding-left: 10px;padding-right: 10px">
+
+  <div nz-row [nzGutter]="16">
+    <div nz-col class="gutter-row" [nzSpan]="12">
+      <div class="inner-box case-content">
+
+        <div nz-row style="background-color: #cccccc">
+          <h1 style="text-align: center">居民电力消费情况</h1>
+        </div>
+        <div nz-row class="gutter-example">
+          <div nz-col nzSpan="24">
+
+            <div class="echarts" echarts [options]="option_electric"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="12">
+      <div class="inner-box case-content">
+
+        <div nz-row style="background-color: #cccccc">
+          <h1 style="text-align: center">各市居民电力消费情况</h1>
+        </div>
+        <div nz-row class="gutter-example">
+          <div nz-col nzSpan="24">
+
+            <div class="echarts" echarts [options]="option_electric_city"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div nz-row [nzGutter]="16">
+    <div nz-col class="gutter-row" [nzSpan]="12">
+      <div class="inner-box case-content">
+
+        <div nz-row style="background-color: #cccccc">
+          <h1 style="text-align: center">工业电力消费情况</h1>
+        </div>
+        <div nz-row [nzGutter]="16" class="gutter-example">
+
+          <div nz-col class="gutter-row" [nzSpan]="12">
+            <div class="inner-box">
+              <div class="echarts" echarts [options]="option_industry"></div>
+            </div>
+          </div>
+          <div nz-col class="gutter-row" [nzSpan]="12">
+            <div class="inner-box">
+              <div class="echarts" echarts [options]="option_industry_city"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="12">
+      <div class="inner-box case-content">
+
+        <div nz-row style="background-color: #cccccc">
+          <h1 style="text-align: center">各市工业电力消费情况</h1>
+        </div>
+        <div nz-row class="gutter-example">
+
+          <div nz-col nzSpan="24">
+            <div class="echarts" echarts [options]="option_industry_city1"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>

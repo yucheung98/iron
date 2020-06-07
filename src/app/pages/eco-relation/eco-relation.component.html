@@ -1,0 +1,66 @@
+<div style="padding-left: 10px;padding-right: 10px">
+
+
+  <div nz-row class="gutter-example">
+    <div nz-col class="gutter-row">
+      <div class="inner-box case-content">
+
+        <div nz-row style="background-color: #cccccc">
+          <h1 style="text-align: center;">区域发展状况的关联分析</h1>
+        </div>
+        <div nz-row [nzGutter]="16">
+          <div nz-col class="gutter-row" [nzSpan]="12">
+            <div class="inner-box">
+
+              <nz-table
+                  #dynamicTable
+                  nzBordered
+                  [nzData]="graph.links"
+                  [nzShowSizeChanger]="true"
+                  [nzFrontPagination]="true"
+                  [nzShowPagination]="true"
+                  [nzFooter]="'A、B、C为GDP增速的低、中、高三类等级；D、E、F为居民用电量增速的低、中、高三类等级；' +
+                   'G、H、I为第二产业用电量增速的低、中、高三类等级；J、K、L为绿色能源发电占比增速的低、中、高三类等级；' +
+                    'M、N、O为火力发电占比增速的低、中、高三类等级；P、Q、R为风力发电占比增速的低、中、高三类等级；' +
+                     'S、T、U为水力发电占比增速的低、中、高三类等级；V、W、X为太阳能发电占比增速的低、中、高三类等级；' +
+                      'Y、Z、h为核能发电占比增速的低、中、高三类等级。'"
+                  [nzScroll]="fixHeader ? { y: '450px' } : null"
+              >
+                <thead>
+                <tr>
+                  <th nzWidth="100px">项集1</th>
+                  <th nzWidth="100px">项集2</th>
+                  <th nzWidth="100px">关联度</th>
+                  <th nzWidth="100px">可信度</th>
+                </tr>
+                </thead>
+                <tbody>
+                <ng-template  ngFor let-data [ngForOf]="dynamicTable.data">
+                  <tr>
+                    <td><a  (click)="singletableGraph(data.source )">{{ data.source }}</a></td>
+                    <td><a (click)="singletableGraph2(data.target )">{{ data.target }}</a></td>
+                    <td>{{ data.Support }}</td>
+                    <td>{{ data.Confidence }}</td>
+                  </tr>
+                </ng-template>
+                </tbody>
+              </nz-table>
+
+            </div>
+          </div>
+          <div nz-col class="gutter-row" [nzSpan]="12">
+            <div class="inner-box">
+
+              <div class="echarts" echarts [options]="option_table_graph"></div>
+
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+</div>
+

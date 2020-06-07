@@ -4,12 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { IconsProviderModule } from './icons-provider.module';
-import { NgZorroAntdModule, NZ_I18N, en_US } from 'ng-zorro-antd';
+import {NgZorroAntdModule, NZ_I18N, zh_CN} from 'ng-zorro-antd';
+import zh from '@angular/common/locales/zh';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { registerLocaleData } from '@angular/common';
-import en from '@angular/common/locales/en';
 import {LoginComponent} from './login/login.component';
 import {WelcomeModule} from './pages/welcome/welcome.module';
 import {NgxEchartsModule} from 'ngx-echarts';
@@ -18,10 +18,13 @@ import 'hammerjs';
 import { ChargingComponent } from './pages/charging/charging.component';
 import { EconomicsComponent } from './pages/economics/economics.component';
 import { EcoForecastComponent } from './pages/eco-forecast/eco-forecast.component';
+import { ElectricComponent } from './pages/electric/electric.component';
+import { EnergyComponent } from './pages/energy/energy.component';
+import { EcoRelationComponent } from './pages/eco-relation/eco-relation.component';
 
 
 
-registerLocaleData(en);
+registerLocaleData(zh);
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ registerLocaleData(en);
     LoginComponent,
     ChargingComponent,
     EconomicsComponent,
-    EcoForecastComponent
+    EcoForecastComponent,
+    ElectricComponent,
+    EnergyComponent,
+    EcoRelationComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +50,7 @@ registerLocaleData(en);
     NgxEchartsModule,
     ChartsModule
   ],
-  providers: [{ provide: NZ_I18N, useValue: en_US }],
+  providers: [{ provide: NZ_I18N, useValue: zh_CN}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

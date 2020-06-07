@@ -1,1 +1,79 @@
-<p>eco-forecast works!</p>
+<div style="padding-left: 10px;padding-right: 10px">
+
+  <div nz-row class="gutter-example">
+    <div nz-col class="gutter-row" [nzSpan]="24">
+      <div class="inner-box case-content">
+
+        <div nz-row style="background-color: #cccccc">
+          <h1 style="text-align: center;">2019年区域发展状况的聚类分析</h1>
+        </div>
+        <div nz-row>
+
+          <nz-table
+              #dynamicTable
+              nzBordered
+              [nzData]="listOfData"
+              [nzShowSizeChanger]="true"
+              [nzFrontPagination]="true"
+              [nzShowPagination]="true"
+              [nzFooter]="'用电量单位为亿千瓦时，GDP单位为亿元，利用以上数据对区域发展状况进行“分级”，分为4类，0表示发展良好区域、1为发展较好区域、2为发展一般区域以及3表示发展较差区域'"
+              [nzScroll]="fixHeader ? { y: '200px' } : null"
+          >
+            <thead>
+            <tr>
+              <th nzWidth="70px">地区</th>
+              <th nzWidth="200px">2019城市居民用电量</th>
+              <th nzWidth="200px">2019农村居民用电量</th>
+              <th nzWidth="250px">2019各地区第二产业用电量</th>
+              <th nzWidth="250px">2019各地区钢铁行业用电量</th>
+              <th nzWidth="250px">2019年各地区清洁能源占比</th>
+              <th nzWidth="200px">2019年辽宁各区GDP</th>
+              <th  nzRight="0px">聚类结果</th>
+            </tr>
+            </thead>
+            <tbody>
+            <ng-template  ngFor let-data [ngForOf]="dynamicTable.data">
+              <tr>
+                <td>{{ data.key1 }}</td>
+                <td>{{ data.key2 }}</td>
+                <td>{{ data.key3 }}</td>
+                <td>{{ data.key4 }}</td>
+                <td>{{ data.key5 }}</td>
+                <td>{{ data.key6 }}</td>
+                <td>{{ data.key7 }}</td>
+                <td nzRight="0px">{{ data.key8 }}</td>
+              </tr>
+            </ng-template>
+            </tbody>
+          </nz-table>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+<!--222222222222222222222222222222222222222222222-->
+  <div nz-row>
+
+    <div nz-col class="gutter-row" [nzSpan]="24">
+      <div class="inner-box case-content">
+
+        <div nz-row style="background-color: #cccccc">
+          <h1 style="text-align: center">2019年和2020年重点行政区域发展综合评价值预测</h1>
+        </div>
+        <div nz-row class="gutter-example">
+          <div nz-col nzSpan="24">
+
+            <div class="echarts" echarts [options]="option"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+</div>
+

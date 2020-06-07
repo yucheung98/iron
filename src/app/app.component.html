@@ -21,13 +21,22 @@
         </li>
       </ul>
     </li>
-      <li nz-submenu nzOpen nzTitle="区域模块" nzIcon="dashboard">
+      <li nz-submenu nzTitle="区域模块" nzIcon="dashboard">
         <ul>
-          <li nz-menu-item nzMatchRouter (click)="newTab('区域发展数据看板')">
-            <a routerLink="/eco-kanban" (click)="newTab('区域发展数据看板')">区域发展数据看板</a>
+          <li nz-menu-item nzMatchRouter (click)="newTab('区域发展总体经济情况')">
+            <a routerLink="/eco-GDP" (click)="newTab('区域发展总体经济情况')">区域发展总体经济情况</a>
           </li>
-          <li nz-menu-item nzMatchRouter (click)="newTab('区域发展数据预测')">
-            <a routerLink="/eco-forecast" (click)="newTab('区域发展数据预测')">区域发展数据预测</a>
+          <li nz-menu-item nzMatchRouter (click)="newTab('区域发展电力消费情况')">
+            <a routerLink="/eco-electric" (click)="newTab('区域发展电力消费情况')">区域发展电力消费情况</a>
+          </li>
+          <li nz-menu-item nzMatchRouter (click)="newTab('区域发展能源发展情况')">
+            <a routerLink="/eco-energy" (click)="newTab('区域发展能源发展情况')">区域发展能源发展情况</a>
+          </li>
+          <li nz-menu-item nzMatchRouter (click)="newTab('区域发展数据聚类与预测情况')">
+            <a routerLink="/eco-forecast" (click)="newTab('区域发展数据聚类与预测情况')">区域发展数据聚类与预测情况</a>
+          </li>
+          <li nz-menu-item nzMatchRouter (click)="newTab('区域发展数据关联情况')">
+            <a routerLink="/eco-forecast-relation" (click)="newTab('区域发展数据关联情况')">区域发展数据关联情况</a>
           </li>
         </ul>
       </li>
@@ -72,8 +81,11 @@
             </ng-template>
             <app-welcome *ngIf="tab =='钢铁行业数据看板'"></app-welcome>
             <app-charging *ngIf="tab =='钢铁行业数据预测'"></app-charging>
-            <app-economics *ngIf="tab =='区域发展数据看板'"></app-economics>
-            <app-eco-forecast *ngIf="tab =='区域发展数据预测'"></app-eco-forecast>
+            <app-economics *ngIf="tab =='区域发展总体经济情况'"></app-economics>
+            <app-electric *ngIf="tab =='区域发展电力消费情况'"></app-electric>
+            <app-energy *ngIf="tab =='区域发展能源发展情况'"></app-energy>
+            <app-eco-forecast *ngIf="tab =='区域发展数据聚类与预测情况'"></app-eco-forecast>
+            <app-eco-relation *ngIf="tab =='区域发展数据关联情况'"></app-eco-relation>
           </nz-tab>
         </nz-tabset>
       </div>

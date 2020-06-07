@@ -1,0 +1,261 @@
+<div style="padding-left: 10px;padding-right: 10px">
+
+  <div nz-row [nzGutter]="16">
+    <div nz-col class="gutter-row" [nzSpan]="12">
+      <div class="inner-box case-content">
+
+        <div nz-row style="background-color: #cccccc">
+          <h2 style="text-align: center;font-weight: bold">各发电方式发电量占比</h2>
+        </div>
+        <div nz-row [nzGutter]="16" class="gutter-example">
+
+          <div nz-col class="gutter-row" [nzSpan]="10">
+            <div class="inner-box">
+
+              <div nz-row [nzGutter]="16">
+                <div nz-col class="gutter-row" [nzSpan]="12">
+                  <div class="inner-box">
+                    <div class="gutter-box1 echarts1" style="border-right:1px #e1e1e1 solid">
+                      <div class="gutter-box-text2">
+                        风电
+                      </div>
+                      <div class="gutter-box-text1" style="margin-bottom: 30px">
+                        {{wind[10].toFixed(4)*100 + '%'}}
+                      </div>
+                      <div>
+                        <kendo-sparkline [data]="wind" type="line" class="mini" [seriesColors]="seriesColors">
+                        </kendo-sparkline>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div nz-col class="gutter-row" [nzSpan]="12">
+                  <div class="inner-box">
+                    <div class="gutter-box1 echarts1" style="border-right:1px #e1e1e1 solid">
+                      <div class="gutter-box-text2">
+                        水电
+                      </div>
+                      <div class="gutter-box-text1" style="margin-bottom: 30px">
+                        {{water[10].toFixed(4)*100 + '%'}}
+                      </div>
+                      <div>
+                        <kendo-sparkline [data]="water" type="line" class="mini" [seriesColors]="seriesColors">
+                        </kendo-sparkline>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div nz-col class="gutter-row" [nzSpan]="4">
+            <div class="inner-box">
+              <div class="gutter-box1 echarts1" style="border-right:1px #e1e1e1 solid">
+                <div class="gutter-box-text2">
+                  火电
+                </div>
+                <div class="gutter-box-text1" style="margin-bottom: 30px">
+                  {{fire[10].toFixed(4)*100 + '%'}}
+                </div>
+                <div>
+                  <kendo-sparkline [data]="fire" type="line" class="mini" [seriesColors]="seriesColors">
+                  </kendo-sparkline>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div nz-col class="gutter-row" [nzSpan]="10">
+            <div class="inner-box">
+
+              <div nz-row [nzGutter]="16">
+                <div nz-col class="gutter-row" [nzSpan]="12">
+                  <div class="inner-box">
+                    <div class="gutter-box1 echarts1" style="border-right:1px #e1e1e1 solid">
+                      <div class="gutter-box-text2">
+                        太阳能
+                      </div>
+                      <div class="gutter-box-text1" style="margin-bottom: 30px">
+                        {{sunlight[10].toFixed(4)*100 + '%'}}
+                      </div>
+                      <div>
+                        <kendo-sparkline [data]="sunlight" type="line" class="mini" [seriesColors]="seriesColors">
+                        </kendo-sparkline>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div nz-col class="gutter-row" [nzSpan]="12">
+                  <div class="inner-box">
+                    <div class="gutter-box1 echarts1" style="border-right:1px #e1e1e1 solid">
+                      <div class="gutter-box-text2">
+                        核电
+                      </div>
+                      <div class="gutter-box-text1" style="margin-bottom: 30px">
+                        {{nucleus[10].toFixed(4)*100 + '%'}}
+                      </div>
+                      <div>
+                        <kendo-sparkline [data]="nucleus" type="line" class="mini" [seriesColors]="seriesColors">
+                        </kendo-sparkline>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="12">
+      <div class="inner-box case-content">
+
+        <div nz-row style="background-color: #cccccc">
+          <h2 style="text-align: center;font-weight: bold">能源发电方式设备平均容量对比</h2>
+        </div>
+        <div nz-row [nzGutter]="16" class="gutter-example">
+
+          <div nz-col class="gutter-row" [nzSpan]="12">
+            <div class="inner-box">
+              <div class="echarts1" echarts [options]="option_fire_equipment"></div>
+            </div>
+          </div>
+          <div nz-col class="gutter-row" [nzSpan]="12">
+            <div class="inner-box">
+              <div class="echarts1" echarts [options]="option_green_equipment"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+<!--22222222222222222222222222222222222222-->
+  <div nz-row [nzGutter]="16" class="gutter-example">
+    <div nz-col class="gutter-row" [nzSpan]="24">
+      <div class="inner-box case-content">
+
+
+        <div nz-row style="background-color: #cccccc">
+          <h2 style="text-align: center;font-weight: bold">各城市各发电方式发电量占比</h2>
+        </div>
+        <div nz-row [nzGutter]="16" class="gutter-example1">
+
+          <div nz-col class="gutter-row" [nzSpan]="9">
+            <div class="inner-box case-content1">
+
+              <div nz-row >
+                <div nz-col class="gutter-row" [nzSpan]="12">
+                  <div class="inner-box">
+                    <div class="echarts" echarts [options]="option_wind_city"></div>
+                  </div>
+                </div>
+                <div nz-col class="gutter-row" [nzSpan]="12">
+                  <div class="inner-box">
+                    <div class="echarts" echarts [options]="option_water_city"></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div nz-col class="gutter-row" [nzSpan]="6">
+            <div class="inner-box case-content1">
+              <div class="echarts" echarts [options]="option_fire_city"></div>
+            </div>
+          </div>
+
+          <div nz-col class="gutter-row" [nzSpan]="9">
+            <div class="inner-box case-content1">
+
+              <div nz-row >
+                <div nz-col class="gutter-row" [nzSpan]="12">
+                  <div class="inner-box">
+                    <div class="echarts" echarts [options]="option_sunlight_city"></div>
+                  </div>
+                </div>
+                <div nz-col class="gutter-row" [nzSpan]="12">
+                  <div class="inner-box">
+                    <div class="echarts" echarts [options]="option_nucleus_city"></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+<!--  33333333333333333333333333333333333-->
+  <div nz-row [nzGutter]="16" class="gutter-example">
+    <div nz-col class="gutter-row" [nzSpan]="24">
+      <div class="inner-box case-content">
+
+        <div nz-row style="background-color: #cccccc">
+          <h2 style="text-align: center;font-weight: bold">各城市能源发电方式设备平均容量对比</h2>
+        </div>
+        <div nz-row [nzGutter]="16" class="gutter-example1">
+
+          <div nz-col class="gutter-row" [nzSpan]="9">
+            <div class="inner-box case-content1">
+
+              <div nz-row >
+                <div nz-col class="gutter-row" [nzSpan]="12">
+                  <div class="inner-box">
+                    <div class="echarts" echarts [options]="option_wind_equipment_city"></div>
+                  </div>
+                </div>
+                <div nz-col class="gutter-row" [nzSpan]="12">
+                  <div class="inner-box">
+                    <div class="echarts" echarts [options]="option_water_equipment_city"></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div nz-col class="gutter-row" [nzSpan]="6">
+            <div class="inner-box case-content1">
+              <div class="echarts" echarts [options]="option_fire_equipment_city"></div>
+            </div>
+          </div>
+
+          <div nz-col class="gutter-row" [nzSpan]="9">
+            <div class="inner-box case-content1">
+
+              <div nz-row >
+                <div nz-col class="gutter-row" [nzSpan]="12">
+                  <div class="inner-box">
+                    <div class="echarts" echarts [options]="option_sunlight_equipment_city"></div>
+                  </div>
+                </div>
+                <div nz-col class="gutter-row" [nzSpan]="12">
+                  <div class="inner-box">
+                    <div class="echarts" echarts [options]="option_nucleus_equipment_city"></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+</div>

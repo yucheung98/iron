@@ -1,16 +1,19 @@
 .gutter-example{
-  margin-bottom: 10px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom:1px #e1e1e1 solid;
+  margin-bottom: 20px;
+  /*padding-left: 5px;*/
+  /*padding-right: 5px;*/
+  /*border-bottom:1px #e1e1e1 solid;*/
   /*background-color: pink;*/
 }
 .case-content {
   position: relative;
-  -webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.6),0 0 10px rgba(0,0,0,0.3) inset;
-  -moz-box-shadow: 0 1px 10px rgba(0,0,0,0.6),0 0 10px rgba(0,0,0,0.3) inset;
-  box-shadow: 0 1px 10px rgba(0,0,0,0.6),0 0 10px rgba(0,0,0,0.3) inset;
-  -o-box-shadow:0 1px 10px rgba(0,0,0,0.6),0 0 10px rgba(0,0,0,0.3) inset;
+  /*-webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.6),0 0 10px rgba(0,0,0,0.3) inset;*/
+  /*-moz-box-shadow: 0 1px 10px rgba(0,0,0,0.6),0 0 10px rgba(0,0,0,0.3) inset;*/
+  /*box-shadow: 0 1px 10px rgba(0,0,0,0.6);*/
+  /*box-shadow: -2px 0 3px -1px green,0 -2px 3px -1px blue,0 2px 3px -1px red,2px 0 3px -1px yellow;*/
+  box-shadow: -2px 0 5px -1px rgba(0,0,0,0.3), 0 20px 20px -20px rgba(0,0,0,0.6), 2px 0 5px -1px rgba(0,0,0,0.3);
+  /*//左边阴影 //顶部阴影 //底部阴影 //右边阴影*/
+  /*-o-box-shadow:0 1px 10px rgba(0,0,0,0.6),0 0 10px rgba(0,0,0,0.3) inset;*/
 }
 .case-content1 {
   position: relative;
@@ -20,23 +23,24 @@
   -o-box-shadow:0 1px 10px rgba(0,0,0,0.1),0 0 10px rgba(0,0,0,0.1) inset;
 }
 .echarts{
-  height: 145px;
+  height: 330px;
 }
 .gutter-box1 {
   text-align: center;
   padding-bottom: 5px;
 }
 .gutter-box-text1 {
-  font-size: 25px;
+  font-size: 30px;
   color: #1890ff;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 .gutter-box-text2 {
-  font-size: 16px;
+  font-size: 25px;
   color: rgba(0,0,0,0.5);
 }
 .mini{
   width: 100%;
+  height: 150px;
 }
 
 
