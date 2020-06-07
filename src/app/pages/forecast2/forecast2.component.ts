@@ -89,7 +89,7 @@ export class Forecast2Component implements OnInit {
   ngOnInit() {
 
     this.option_forecast4 = {
-      color: ['#22A5FF', '#05BA31'],
+      // color: ['#22A5FF', '#05BA31'],
       title: {
         // text: '鞍山钢铁股价预测'
       },
@@ -218,7 +218,7 @@ export class Forecast2Component implements OnInit {
       ]
     };
     this.option_forecast5 = {
-      color: ['#22A5FF', '#05BA31'],
+      // color: ['#22A5FF', '#05BA31'],
       title: {
         // text: '本溪钢铁股价预测'
       },
@@ -347,7 +347,7 @@ export class Forecast2Component implements OnInit {
       ]
     };
     this.option_forecast6 = {
-      color: ['#22A5FF', '#05BA31'],
+      // color: ['#22A5FF', '#05BA31'],
       title: {
         // text: '凌源钢铁股价预测'
       },

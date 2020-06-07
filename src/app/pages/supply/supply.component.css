@@ -1,22 +1,10 @@
+.gutter-example{
+  margin-bottom: 20px;
+}
 .case-content {
   position: relative;
-  -webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.6),0 0 10px rgba(0,0,0,0.3) inset;
-  -moz-box-shadow: 0 1px 10px rgba(0,0,0,0.6),0 0 10px rgba(0,0,0,0.3) inset;
-  box-shadow: 0 1px 10px rgba(0,0,0,0.6),0 0 10px rgba(0,0,0,0.3) inset;
-  -o-box-shadow:0 1px 10px rgba(0,0,0,0.6),0 0 10px rgba(0,0,0,0.3) inset;
-
-  /*-webkit-box-shadow: 1px 0px 15px #696969;*/
-  /*background: rgba(255, 255, 255, 0.45) none repeat scroll 0 0 !important;*/
-}
-.border-triangle-bottom1 {
-  border: 1px solid #1d9cd6;
-  position: relative;
-  border-radius: 4px;
-
-  /*-webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.4),0 0 10px rgba(0,0,0,0.1) inset;*/
-  /*-moz-box-shadow: 0 1px 10px rgba(0,0,0,0.4),0 0 10px rgba(0,0,0,0.1) inset;*/
-  /*box-shadow: 0 1px 10px rgba(0,0,0,0.4),0 0 10px rgba(0,0,0,0.1) inset;*/
-  /*-o-box-shadow:0 1px 10px rgba(0,0,0,0.4),0 0 10px rgba(0,0,0,0.1) inset;*/
+  box-shadow: -2px 0 5px -1px rgba(0,0,0,0.3), 0 20px 20px -20px rgba(0,0,0,0.6), 2px 0 5px -1px rgba(0,0,0,0.3);
+  /*//左边阴影 //顶部阴影 //底部阴影 //右边阴影*/
 }
 .gutter-box1 {
   padding: 8px 0;
@@ -43,7 +31,7 @@
 }
 .mini{
   height:100px;
-  width: 300px;
+  /*width: 300px;*/
   /*margin-left: 30px;*/
   /*margin-left: 20%;*/
   /*background-color:transparent;*/

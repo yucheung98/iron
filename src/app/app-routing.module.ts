@@ -17,8 +17,6 @@ const routes: Routes = [
   { path: 'supply', component: SupplyComponent },
   { path: 'forecast1', component: Forecast1Component },
   { path: 'forecast2', component: Forecast2Component },
-  // { path: 'icon-kanban', loadChildren: () => import('./pages/welcome/welcome.module').then(m => m.WelcomeModule) },
-  // { path: 'icon-forecast', component: ChargingComponent },
   { path: 'eco-GDP', component: EconomicsComponent },
   { path: 'eco-electric', component: ElectricComponent },
   { path: 'eco-energy ', component: EnergyComponent },

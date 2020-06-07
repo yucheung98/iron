@@ -88,7 +88,7 @@ export class Forecast1Component implements OnInit {
 
   ngOnInit() {
     this.option_forecast1 = {
-      color: ['#22A5FF', '#05BA31'],
+      // color: ['#22A5FF', '#05BA31'],
       title: {
         // text: '未来一个月的辽宁省钢铁行业总用电量预测'
       },
@@ -266,7 +266,7 @@ export class Forecast1Component implements OnInit {
       ]
     };
     this.option_forecast2 = {
-      color: ['#22A5FF', '#05BA31'],
+      // color: ['#22A5FF', '#05BA31'],
       title: {
         // text: '未来一年的辽宁省钢铁行业总用电量预测'
       },
@@ -386,7 +386,7 @@ export class Forecast1Component implements OnInit {
       ]
     };
     this.option_forecast3 = {
-      color: ['#22A5FF', '#05BA31'],
+      // color: ['#22A5FF', '#05BA31'],
       title: {
         // text: '辽宁省钢材总产量预测'
       },

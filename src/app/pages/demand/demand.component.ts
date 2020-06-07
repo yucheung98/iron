@@ -18,7 +18,7 @@ export class DemandComponent implements OnInit {
 
   ngOnInit() {
     this.option_house = {
-      color: ['#1e90ff'],
+      // color: ['#1e90ff'],
       title: {
         // text: '钢材产量'
       },
@@ -118,7 +118,7 @@ export class DemandComponent implements OnInit {
       ]
     };
     this.option_solid = {
-      color: ['#22A5FF', '#05BA31'],
+      // color: ['#22A5FF', '#05BA31'],
       title: {
         // text: '进口数量'
       },
@@ -244,7 +244,7 @@ export class DemandComponent implements OnInit {
       ]
     };
     this.option_yiled1 = {
-      color: ['#05BA31', '#1e90ff', '#99cc33', '#5180F0'],
+      // color: ['#05BA31', '#1e90ff', '#99cc33', '#5180F0'],
       title: {
         // text: '开工率'
       },
@@ -401,7 +401,7 @@ export class DemandComponent implements OnInit {
       ]
     };
     this.option_yiled2 = {
-      color: ['#05BA31', '#22A5FF', '#99cc33', '#5180F0', '#32F0AC'],
+      // color: ['#05BA31', '#22A5FF', '#99cc33', '#5180F0', '#32F0AC'],
       title: {
         // text: '开工率'
       },

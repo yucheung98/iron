@@ -1,17 +1,10 @@
 .gutter-example{
-  margin-bottom: 10px;
-  padding-left: 5px;
-  padding-right: 5px;
+  margin-bottom: 20px;
 }
 .case-content {
   position: relative;
-  -webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.6),0 0 10px rgba(0,0,0,0.3) inset;
-  -moz-box-shadow: 0 1px 10px rgba(0,0,0,0.6),0 0 10px rgba(0,0,0,0.3) inset;
-  box-shadow: 0 1px 10px rgba(0,0,0,0.6),0 0 10px rgba(0,0,0,0.3) inset;
-  -o-box-shadow:0 1px 10px rgba(0,0,0,0.6),0 0 10px rgba(0,0,0,0.3) inset;
-
-  /*-webkit-box-shadow: 1px 0px 15px #696969;*/
-  /*background: rgba(255, 255, 255, 0.45) none repeat scroll 0 0 !important;*/
+  box-shadow: -2px 0 5px -1px rgba(0,0,0,0.3), 0 20px 20px -20px rgba(0,0,0,0.6), 2px 0 5px -1px rgba(0,0,0,0.3);
+  /*//左边阴影 //顶部阴影 //底部阴影 //右边阴影*/
 }
 .case-content1 {
   position: relative;
@@ -21,5 +14,5 @@
   -o-box-shadow:0 1px 10px rgba(0,0,0,0.1),0 0 10px rgba(0,0,0,0.1) inset;
 }
 .echarts{
-  height: 376px;
+  height: 360px;
 }

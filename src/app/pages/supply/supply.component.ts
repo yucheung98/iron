@@ -153,7 +153,7 @@ export class SupplyComponent implements OnInit {
 
   ngOnInit() {
     this.option_rate1 = {
-      color: ['#05BA31', '#22A5FF', '#99cc33', '#5180F0'],
+      // color: ['#05BA31', '#22A5FF', '#99cc33', '#5180F0'],
       title: {
         // text: '开工率'
       },
@@ -354,7 +354,7 @@ export class SupplyComponent implements OnInit {
       ]
     };
     this.option_rate2 = {
-      color: ['#1e90ff', '#99cc33'],
+      // color: ['#1e90ff', '#99cc33'],
       title: {
         // text: '进口数量'
       },
@@ -465,7 +465,7 @@ export class SupplyComponent implements OnInit {
       ]
     };
     this.option_rate3 = {
-      color: ['#5180F0'],
+      // color: ['#5180F0'],
       title: {
         // text: '钢材产量'
       },

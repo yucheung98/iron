@@ -1,145 +1,151 @@
-<div class="border case-content"  style="margin-top: 12px">
-  <div nz-row nzGutter="16">
-    <!--    成本-->
-    <div nz-col class="gutter-row" [nzSpan]="10">
-      <div class="inner-box">
-        <h2 style="text-align: center"><img src="../../../assets/img/cailiao.png" height="32" width="35"/>原材料成本</h2>
-        <div nz-row>
-          <div nz-col nzSpan="8" style="border-right:1px #e1e1e1 solid ">
-            <div class="gutter-box1">
-              <div class="gutter-box-text2">
-                铁矿石价格指数
-              </div>
-              <div class="gutter-box-text1">
-                314.45
-              </div>
-              <div>
-                <kendo-sparkline [data]="ironstone" type="line" class="mini" [seriesColors]="seriesColors">
-                </kendo-sparkline>
-              </div>
-            </div>
-          </div>
-          <div nz-col nzSpan="8" style="border-right:1px #e1e1e1 solid ">
-            <div class="gutter-box1">
-              <div class="gutter-box-text2">
-                国产铁矿石价格指数
-              </div>
-              <div class="gutter-box-text1">
-                311.75
-              </div>
-              <div>
-                <kendo-sparkline [data]="domestic" type="line" class="mini" [seriesColors]="seriesColors">
-                </kendo-sparkline>
-              </div>
-            </div>
-          </div>
-          <div nz-col nzSpan="8">
-            <div class="gutter-box1">
-              <div class="gutter-box-text2">
-                进口铁矿石价格指数
-              </div>
-              <div class="gutter-box-text1">
-                314.96
-              </div>
-              <div>
-                <kendo-sparkline [data]="entrance" type="line" class="mini" [seriesColors]="seriesColors">
-                </kendo-sparkline>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--    价格style="border-right:1px #e1e1e1 solid;border-left:1px #e1e1e1 solid "-->
-    <div nz-col class="gutter-row border case-content" [nzSpan]="4">
-      <h2 style="text-align: center"><img src="../../../assets/img/jiage.png" height="25" width="25"/>钢铁价格</h2>
-      <div class="inner-box"  >
-        <div class="gutter-box1">
-          <div class="gutter-box-text2">
-            钢铁价格指数
-          </div>
-          <div class="gutter-box-text1">
-            101.19
-          </div>
-          <div>
-            <kendo-sparkline [data]="iron" type="line" class="mini" [seriesColors]="seriesColors">
-            </kendo-sparkline>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--    成本-->
-    <div nz-col class="gutter-row" [nzSpan]="10">
-      <div class="inner-box">
-        <h2 style="text-align: center"><img src="../../../assets/img/cailiao.png" height="32" width="35"/>原材料成本</h2>
-        <div nz-row>
-          <div nz-col nzSpan="8" style="border-right:1px #e1e1e1 solid ">
-            <div class="gutter-box1">
-              <div class="gutter-box-text2">
-                硅锰价格指数
-              </div>
-              <div class="gutter-box-text1">
-                6975
-              </div>
-              <div>
-                <kendo-sparkline [data]="silicon" type="line" class="mini" [seriesColors]="seriesColors">
-                </kendo-sparkline>
-              </div>
-            </div>
-          </div>
-          <div nz-col nzSpan="8" style="border-right:1px #e1e1e1 solid ">
-            <div class="gutter-box1">
-              <div class="gutter-box-text2">
-                焦炭价格指数
-              </div>
-              <div class="gutter-box-text1">
-                1656
-              </div>
-              <div>
-                <kendo-sparkline [data]="coke" type="line" class="mini" [seriesColors]="seriesColors">
-                </kendo-sparkline>
-              </div>
-            </div>
-          </div>
-          <div nz-col nzSpan="8">
-            <div class="gutter-box1">
-              <div class="gutter-box-text2">
-                高碳铬铁价格指数
-              </div>
-              <div class="gutter-box-text1">
-                6000
-              </div>
-              <div>
-                <kendo-sparkline [data]="carbon" type="line" class="mini" [seriesColors]="seriesColors">
-                </kendo-sparkline>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!--供给-->
-<div class="border-triangle-bottom1 case-content" style="margin-top: 16px">
-  <h2 style="text-align: center"><img src="../../../assets/img/channeng.png" height="32" width="32"/>产能供给</h2>
-  <div class="gutter-example">
+<div style="padding-left: 10px;padding-right: 10px">
+
+  <div class="gutter-example case-content"  style="margin-top: 12px">
     <div nz-row nzGutter="16">
-      <div nz-col class="gutter-row" nzSpan="8">
-        <div nz-row class="wanzheng case-content1">
-          <div class="echarts" echarts [options]="option_rate1"></div>
+      <!--    成本-->
+      <div nz-col class="gutter-row" [nzSpan]="10">
+        <div class="inner-box">
+          <h2 style="text-align: center;background-color: #cccccc"><img src="../../../assets/img/cailiao.png" height="32" width="35"/>原材料成本</h2>
+          <div nz-row>
+            <div nz-col nzSpan="8" style="border-right:1px #e1e1e1 solid ">
+              <div class="gutter-box1">
+                <div class="gutter-box-text2">
+                  铁矿石价格指数
+                </div>
+                <div class="gutter-box-text1">
+                  314.45
+                </div>
+                <div>
+                  <kendo-sparkline [data]="ironstone" type="line" class="mini" [seriesColors]="seriesColors">
+                  </kendo-sparkline>
+                </div>
+              </div>
+            </div>
+            <div nz-col nzSpan="8" style="border-right:1px #e1e1e1 solid ">
+              <div class="gutter-box1">
+                <div class="gutter-box-text2">
+                  国产铁矿石价格指数
+                </div>
+                <div class="gutter-box-text1">
+                  311.75
+                </div>
+                <div>
+                  <kendo-sparkline [data]="domestic" type="line" class="mini" [seriesColors]="seriesColors">
+                  </kendo-sparkline>
+                </div>
+              </div>
+            </div>
+            <div nz-col nzSpan="8">
+              <div class="gutter-box1">
+                <div class="gutter-box-text2">
+                  进口铁矿石价格指数
+                </div>
+                <div class="gutter-box-text1">
+                  314.96
+                </div>
+                <div>
+                  <kendo-sparkline [data]="entrance" type="line" class="mini" [seriesColors]="seriesColors">
+                  </kendo-sparkline>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div nz-col class="gutter-row" nzSpan="8">
-        <div nz-row class="rongyu case-content1">
-          <div class="echarts" echarts [options]="option_rate2"></div>
+      <!--    价格style="border-right:1px #e1e1e1 solid;border-left:1px #e1e1e1 solid "-->
+      <div nz-col class="case-content" [nzSpan]="4">
+        <h2 style="text-align: center;background-color: #cccccc"><img src="../../../assets/img/jiage.png" height="25" width="25"/>钢铁价格</h2>
+        <div class="inner-box"  >
+          <div class="gutter-box1">
+            <div class="gutter-box-text2">
+              钢铁价格指数
+            </div>
+            <div class="gutter-box-text1">
+              101.19
+            </div>
+            <div>
+              <kendo-sparkline [data]="iron" type="line" class="mini" [seriesColors]="seriesColors">
+              </kendo-sparkline>
+            </div>
+          </div>
         </div>
       </div>
-      <div nz-col class="gutter-row" nzSpan="8">
-        <div nz-row class="yizhi case-content1">
-          <div class="echarts" echarts [options]="option_rate3"></div>
+      <!--    成本-->
+      <div nz-col class="gutter-row" [nzSpan]="10">
+        <div class="inner-box">
+          <h2 style="text-align: center;background-color: #cccccc"><img src="../../../assets/img/cailiao.png" height="32" width="35"/>原材料成本</h2>
+          <div nz-row>
+            <div nz-col nzSpan="8" style="border-right:1px #e1e1e1 solid ">
+              <div class="gutter-box1">
+                <div class="gutter-box-text2">
+                  硅锰价格指数
+                </div>
+                <div class="gutter-box-text1">
+                  6975
+                </div>
+                <div>
+                  <kendo-sparkline [data]="silicon" type="line" class="mini" [seriesColors]="seriesColors">
+                  </kendo-sparkline>
+                </div>
+              </div>
+            </div>
+            <div nz-col nzSpan="8" style="border-right:1px #e1e1e1 solid ">
+              <div class="gutter-box1">
+                <div class="gutter-box-text2">
+                  焦炭价格指数
+                </div>
+                <div class="gutter-box-text1">
+                  1656
+                </div>
+                <div>
+                  <kendo-sparkline [data]="coke" type="line" class="mini" [seriesColors]="seriesColors">
+                  </kendo-sparkline>
+                </div>
+              </div>
+            </div>
+            <div nz-col nzSpan="8">
+              <div class="gutter-box1">
+                <div class="gutter-box-text2">
+                  高碳铬铁价格指数
+                </div>
+                <div class="gutter-box-text1">
+                  6000
+                </div>
+                <div>
+                  <kendo-sparkline [data]="carbon" type="line" class="mini" [seriesColors]="seriesColors">
+                  </kendo-sparkline>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
+  <!--供给-->
+  <div class="gutter-example case-content" style="margin-top: 16px">
+    <h2 style="text-align: center;background-color: #cccccc"><img src="../../../assets/img/channeng.png" height="32" width="32"/>产能供给</h2>
+    <div class="gutter-example">
+      <div nz-row nzGutter="16">
+        <div nz-col class="gutter-row" nzSpan="8">
+          <div nz-row class="wanzheng case-content1">
+            <div class="echarts" echarts [options]="option_rate1"></div>
+          </div>
+        </div>
+        <div nz-col class="gutter-row" nzSpan="8">
+          <div nz-row class="rongyu case-content1">
+            <div class="echarts" echarts [options]="option_rate2"></div>
+          </div>
+        </div>
+        <div nz-col class="gutter-row" nzSpan="8">
+          <div nz-row class="yizhi case-content1">
+            <div class="echarts" echarts [options]="option_rate3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 </div>
+

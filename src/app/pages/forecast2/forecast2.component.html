@@ -1,38 +1,41 @@
-<div class="gutter-example ">
-  <div nz-row nzGutter="16">
+<div style="padding-left: 10px;padding-right: 10px">
 
-    <!--    成本-->
-    <div nz-col class="gutter-row" [nzSpan]="24">
-      <div class="inner-box case-content1">
-        <h2 style="text-align: center">辽宁省重点钢铁行业上市公司股票价格预测</h2>
-        <div nz-row>
-          <div nz-col nzSpan="8" style="border-right:1px #e1e1e1 solid ">
-            <div class="gutter-box1">
-              <div class="gutter-box-text2">
-                2020年6月鞍山钢铁股价
-              </div>
-              <div class="gutter-box-text1">
-                3.35<span style="color: black;font-size: 16px;margin-left: 5px">元</span>
-              </div>
-            </div>
-          </div>
-          <div nz-col nzSpan="8" style="border-right:1px #e1e1e1 solid ">
-            <div class="gutter-box1">
-              <div class="gutter-box-text2">
-                2020年6月本溪钢铁股价
-              </div>
-              <div class="gutter-box-text1">
-                3.38<span style="color: black;font-size: 16px;margin-left: 5px">元</span>
+  <div class="gutter-example ">
+    <div nz-row nzGutter="16">
+
+      <!--    成本-->
+      <div nz-col class="gutter-row" [nzSpan]="24">
+        <div class="inner-box case-content1">
+          <h2 style="text-align: center;background-color: #cccccc">辽宁省重点钢铁行业上市公司股票价格预测</h2>
+          <div nz-row>
+            <div nz-col nzSpan="8" style="border-right:1px #e1e1e1 solid ">
+              <div class="gutter-box1">
+                <div class="gutter-box-text2">
+                  2020年6月鞍山钢铁股价
+                </div>
+                <div class="gutter-box-text1">
+                  3.35<span style="color: black;font-size: 16px;margin-left: 5px">元</span>
+                </div>
               </div>
             </div>
-          </div>
-          <div nz-col nzSpan="8">
-            <div class="gutter-box1">
-              <div class="gutter-box-text2">
-                2020年6月凌源钢铁股价
+            <div nz-col nzSpan="8" style="border-right:1px #e1e1e1 solid ">
+              <div class="gutter-box1">
+                <div class="gutter-box-text2">
+                  2020年6月本溪钢铁股价
+                </div>
+                <div class="gutter-box-text1">
+                  3.38<span style="color: black;font-size: 16px;margin-left: 5px">元</span>
+                </div>
               </div>
-              <div class="gutter-box-text1">
-                4.59<span style="color: black;font-size: 16px;margin-left: 5px">元</span>
+            </div>
+            <div nz-col nzSpan="8">
+              <div class="gutter-box1">
+                <div class="gutter-box-text2">
+                  2020年6月凌源钢铁股价
+                </div>
+                <div class="gutter-box-text1">
+                  4.59<span style="color: black;font-size: 16px;margin-left: 5px">元</span>
+                </div>
               </div>
             </div>
           </div>
@@ -40,89 +43,92 @@
       </div>
     </div>
   </div>
-</div>
 
-<div class="gutter-example ">
+  <div class="gutter-example ">
 
 
     <!--    成本-->
 
-      <div class="inner-box case-content1">
-        <div nz-row >
-          <div nz-col nzSpan="8" style="border-right:1px #e1e1e1 solid ">
-            <div  class="echarts">
-              <h3 style="text-align: center;line-height: 50px">鞍山钢铁股价</h3>
-              <div class="gutter-box1">
-                <div nz-row class="gutter-box-text2">
-                  <div nz-col nzSpan="6">时间</div>
-                  <div nz-col nzSpan="6">真实值</div>
-                  <div nz-col nzSpan="6">预测值</div>
-                  <div nz-col nzSpan="6">误差值</div>
-                </div>
-                <div nz-row  *ngFor="let data of listOfData3" class="gutter-box-text">
-                  <div nz-col nzSpan="6"> {{ data.key }}</div>
-                  <div nz-col nzSpan="6">{{ data.name }}</div>
-                  <div nz-col nzSpan="6">{{ data.age }}</div>
-                  <div nz-col nzSpan="6" *ngIf="data.address < 0" style="color: red"><img
-                    src="../../../assets/img/down.png" height="16" width="16"/>{{ data.address + '%'}}</div>
-                  <div nz-col nzSpan="6" *ngIf="data.address >= 0" style="color: limegreen"><img
-                    src="../../../assets/img/up.png" height="16" width="16"/>{{ data.address + '%'}}</div>
-                </div>
+    <div class="inner-box case-content1">
+      <div nz-row >
+        <div nz-col nzSpan="8" style="border-right:1px #e1e1e1 solid ">
+          <div  class="echarts">
+            <h2 style="text-align: center;background-color: #cccccc">鞍山钢铁股价</h2>
+            <div class="gutter-box1">
+              <div nz-row class="gutter-box-text2">
+                <div nz-col nzSpan="6">时间</div>
+                <div nz-col nzSpan="6">真实值</div>
+                <div nz-col nzSpan="6">预测值</div>
+                <div nz-col nzSpan="6">误差值</div>
               </div>
-            </div>
-            <div class="echarts" echarts [options]="option_forecast4"></div>
-          </div>
-          <div nz-col nzSpan="8" style="border-right:1px #e1e1e1 solid ">
-            <div class="echarts" echarts [options]="option_forecast5"></div>
-            <div  class="echarts">
-              <h3 style="text-align: center;line-height: 50px">本溪钢铁股价</h3>
-              <div class="gutter-box1">
-                <div nz-row class="gutter-box-text2">
-                  <div nz-col nzSpan="6">时间</div>
-                  <div nz-col nzSpan="6">真实值</div>
-                  <div nz-col nzSpan="6">预测值</div>
-                  <div nz-col nzSpan="6">误差值</div>
-                </div>
-                <div nz-row  *ngFor="let data of listOfData4" class="gutter-box-text">
-                  <div nz-col nzSpan="6"> {{ data.key }}</div>
-                  <div nz-col nzSpan="6">{{ data.name }}</div>
-                  <div nz-col nzSpan="6">{{ data.age }}</div>
-                  <div nz-col nzSpan="6" *ngIf="data.address < 0" style="color: red"><img
-                    src="../../../assets/img/down.png" height="16" width="16"/>{{ data.address + '%'}}</div>
-                  <div nz-col nzSpan="6" *ngIf="data.address >= 0" style="color: limegreen"><img
-                    src="../../../assets/img/up.png" height="16" width="16"/>{{ data.address + '%'}}</div>
-                </div>
+              <div nz-row  *ngFor="let data of listOfData3" class="gutter-box-text">
+                <div nz-col nzSpan="6"> {{ data.key }}</div>
+                <div nz-col nzSpan="6">{{ data.name }}</div>
+                <div nz-col nzSpan="6">{{ data.age }}</div>
+                <div nz-col nzSpan="6" *ngIf="data.address < 0" style="color: red"><img
+                  src="../../../assets/img/down.png" height="16" width="16"/>{{ data.address + '%'}}</div>
+                <div nz-col nzSpan="6" *ngIf="data.address >= 0" style="color: limegreen"><img
+                  src="../../../assets/img/up.png" height="16" width="16"/>{{ data.address + '%'}}</div>
               </div>
             </div>
           </div>
-          <div nz-col nzSpan="8">
-            <div  class="echarts">
-              <h3 style="text-align: center;line-height: 50px">凌源钢铁股价</h3>
-              <div class="gutter-box1">
-                <div nz-row class="gutter-box-text2">
-                  <div nz-col nzSpan="6">时间</div>
-                  <div nz-col nzSpan="6">真实值</div>
-                  <div nz-col nzSpan="6">预测值</div>
-                  <div nz-col nzSpan="6">误差值</div>
-                </div>
-                <div nz-row  *ngFor="let data of listOfData5" class="gutter-box-text">
-                  <div nz-col nzSpan="6"> {{ data.key }}</div>
-                  <div nz-col nzSpan="6">{{ data.name }}</div>
-                  <div nz-col nzSpan="6">{{ data.age }}</div>
-                  <div nz-col nzSpan="6" *ngIf="data.address < 0" style="color: red"><img
-                    src="../../../assets/img/down.png" height="16" width="16"/>{{ data.address + '%'}}</div>
-                  <div nz-col nzSpan="6" *ngIf="data.address >= 0" style="color: limegreen"><img
-                    src="../../../assets/img/up.png" height="16" width="16"/>{{ data.address + '%'}}</div>
-                </div>
+          <div class="echarts" echarts [options]="option_forecast4"></div>
+        </div>
+        <div nz-col nzSpan="8" style="border-right:1px #e1e1e1 solid ">
+          <div  class="echarts">
+            <h2 style="text-align: center;background-color: #cccccc">本溪钢铁股价</h2>
+            <div class="gutter-box1">
+              <div nz-row class="gutter-box-text2">
+                <div nz-col nzSpan="6">时间</div>
+                <div nz-col nzSpan="6">真实值</div>
+                <div nz-col nzSpan="6">预测值</div>
+                <div nz-col nzSpan="6">误差值</div>
+              </div>
+              <div nz-row  *ngFor="let data of listOfData4" class="gutter-box-text">
+                <div nz-col nzSpan="6"> {{ data.key }}</div>
+                <div nz-col nzSpan="6">{{ data.name }}</div>
+                <div nz-col nzSpan="6">{{ data.age }}</div>
+                <div nz-col nzSpan="6" *ngIf="data.address < 0" style="color: red"><img
+                  src="../../../assets/img/down.png" height="16" width="16"/>{{ data.address + '%'}}</div>
+                <div nz-col nzSpan="6" *ngIf="data.address >= 0" style="color: limegreen"><img
+                  src="../../../assets/img/up.png" height="16" width="16"/>{{ data.address + '%'}}</div>
               </div>
             </div>
-            <div class="echarts" echarts [options]="option_forecast6"></div>
           </div>
+          <div class="echarts" echarts [options]="option_forecast5"></div>
+        </div>
+        <div nz-col nzSpan="8">
+          <div  class="echarts">
+            <h2 style="text-align: center;background-color: #cccccc">凌源钢铁股价</h2>
+            <div class="gutter-box1">
+              <div nz-row class="gutter-box-text2">
+                <div nz-col nzSpan="6">时间</div>
+                <div nz-col nzSpan="6">真实值</div>
+                <div nz-col nzSpan="6">预测值</div>
+                <div nz-col nzSpan="6">误差值</div>
+              </div>
+              <div nz-row  *ngFor="let data of listOfData5" class="gutter-box-text">
+                <div nz-col nzSpan="6"> {{ data.key }}</div>
+                <div nz-col nzSpan="6">{{ data.name }}</div>
+                <div nz-col nzSpan="6">{{ data.age }}</div>
+                <div nz-col nzSpan="6" *ngIf="data.address < 0" style="color: red"><img
+                  src="../../../assets/img/down.png" height="16" width="16"/>{{ data.address + '%'}}</div>
+                <div nz-col nzSpan="6" *ngIf="data.address >= 0" style="color: limegreen"><img
+                  src="../../../assets/img/up.png" height="16" width="16"/>{{ data.address + '%'}}</div>
+              </div>
+            </div>
+          </div>
+          <div class="echarts" echarts [options]="option_forecast6"></div>
         </div>
       </div>
+    </div>
 
+
+  </div>
 
 </div>
+
+
 
 
 
