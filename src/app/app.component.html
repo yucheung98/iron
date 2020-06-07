@@ -13,11 +13,17 @@
     <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
      <li nz-submenu nzOpen nzTitle="钢铁模块" nzIcon="dashboard">
       <ul>
-        <li nz-menu-item nzMatchRouter (click)="newTab('钢铁行业数据看板')">
-          <a routerLink="/icon-kanban" (click)="newTab('钢铁行业数据看板')">钢铁行业数据看板</a>
+        <li nz-menu-item nzMatchRouter (click)="newTab('钢铁行业相关需求')">
+          <a routerLink="/demand" (click)="newTab('钢铁行业相关需求')">钢铁行业相关需求</a>
         </li>
-        <li nz-menu-item nzMatchRouter (click)="newTab('钢铁行业数据预测')">
-          <a routerLink="/icon-forecast" (click)="newTab('钢铁行业数据预测')">钢铁行业数据预测</a>
+        <li nz-menu-item nzMatchRouter (click)="newTab('供给与价格')">
+          <a routerLink="/supply" (click)="newTab('供给与价格')">供给与价格</a>
+        </li>
+        <li nz-menu-item nzMatchRouter (click)="newTab('用电量与产量预测')">
+          <a routerLink="/supply" (click)="newTab('用电量与产量预测')">用电量与产量预测</a>
+        </li>
+        <li nz-menu-item nzMatchRouter (click)="newTab('股票价格预测')">
+          <a routerLink="/supply" (click)="newTab('股票价格预测')">股票价格预测</a>
         </li>
       </ul>
     </li>
@@ -79,8 +85,10 @@
                 <i nz-icon nzType="close" (click)="closeTab(tab)" class="ant-tabs-close-x"></i>
               </div>
             </ng-template>
-            <app-welcome *ngIf="tab =='钢铁行业数据看板'"></app-welcome>
-            <app-charging *ngIf="tab =='钢铁行业数据预测'"></app-charging>
+            <app-demand *ngIf="tab =='钢铁行业相关需求'"></app-demand>
+            <app-supply *ngIf="tab =='供给与价格'"></app-supply>
+            <app-forecast1 *ngIf="tab =='用电量与产量预测'"></app-forecast1>
+            <app-forecast2 *ngIf="tab =='股票价格预测'"></app-forecast2>
             <app-economics *ngIf="tab =='区域发展总体经济情况'"></app-economics>
             <app-electric *ngIf="tab =='区域发展电力消费情况'"></app-electric>
             <app-energy *ngIf="tab =='区域发展能源发展情况'"></app-energy>

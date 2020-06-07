@@ -6,11 +6,19 @@ import {EconomicsComponent} from './pages/economics/economics.component';
 import {ElectricComponent} from './pages/electric/electric.component';
 import {EnergyComponent} from './pages/energy/energy.component';
 import {EcoRelationComponent} from './pages/eco-relation/eco-relation.component';
+import {DemandComponent} from './pages/demand/demand.component';
+import {SupplyComponent} from './pages/supply/supply.component';
+import {Forecast1Component} from './pages/forecast1/forecast1.component';
+import {Forecast2Component} from './pages/forecast2/forecast2.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: '/icon-kanban' },
-  { path: 'icon-kanban', loadChildren: () => import('./pages/welcome/welcome.module').then(m => m.WelcomeModule) },
-  { path: 'icon-forecast', component: ChargingComponent },
+  { path: '', pathMatch: 'full', redirectTo: '/demand' },
+  { path: 'demand', component: DemandComponent },
+  { path: 'supply', component: SupplyComponent },
+  { path: 'forecast1', component: Forecast1Component },
+  { path: 'forecast2', component: Forecast2Component },
+  // { path: 'icon-kanban', loadChildren: () => import('./pages/welcome/welcome.module').then(m => m.WelcomeModule) },
+  // { path: 'icon-forecast', component: ChargingComponent },
   { path: 'eco-GDP', component: EconomicsComponent },
   { path: 'eco-electric', component: ElectricComponent },
   { path: 'eco-energy ', component: EnergyComponent },

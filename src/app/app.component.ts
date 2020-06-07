@@ -37,7 +37,7 @@ export class AppComponent implements OnInit {
     const hre = window.location.href.split('/');
     console.log(hre[3]);
     if (!hre[3]) {
-      this.tabs.push('钢铁行业数据看板');
+      this.tabs.push('钢铁行业相关需求');
       this.router.navigateByUrl('/icon-kanban');
     }
     if (hre[3]) {

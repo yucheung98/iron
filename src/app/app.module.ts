@@ -21,6 +21,10 @@ import { EcoForecastComponent } from './pages/eco-forecast/eco-forecast.componen
 import { ElectricComponent } from './pages/electric/electric.component';
 import { EnergyComponent } from './pages/energy/energy.component';
 import { EcoRelationComponent } from './pages/eco-relation/eco-relation.component';
+import { DemandComponent } from './pages/demand/demand.component';
+import { SupplyComponent } from './pages/supply/supply.component';
+import { Forecast1Component } from './pages/forecast1/forecast1.component';
+import { Forecast2Component } from './pages/forecast2/forecast2.component';
 
 
 
@@ -35,7 +39,11 @@ registerLocaleData(zh);
     EcoForecastComponent,
     ElectricComponent,
     EnergyComponent,
-    EcoRelationComponent
+    EcoRelationComponent,
+    DemandComponent,
+    SupplyComponent,
+    Forecast1Component,
+    Forecast2Component
   ],
   imports: [
     BrowserModule,
