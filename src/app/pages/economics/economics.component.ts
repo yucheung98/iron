@@ -92,11 +92,11 @@ export class EconomicsComponent implements OnInit {
           // name: '单位产量耗电量（千瓦/吨）',
           nameLocation: 'middle',
           nameGap: 40,
-          min: -0.3,
-          max: 0.3,
-          interval: 0.2,
+          min: -5,
+          max: 25,
+          interval: 5,
           axisLabel: {
-            formatter: '{value}'
+            formatter: '{value}%'
           },
           splitLine: {
             show: false
@@ -118,8 +118,8 @@ export class EconomicsComponent implements OnInit {
           smooth: true,
           yAxisIndex: 1,
           // tslint:disable-next-line:max-line-length
-          data: [0.13006552,	0.2132971,	0.204224677,	0.1178641,	0.095256743,	0.051936522,	0.001482538,	-0.224009052,	0.052247279,	0.004327351
-          ]
+          data: [13.00,	21.32,	20.42,	11.78,	9.52,	5.19,	0.14,	22.40,	5.22,	0.43]
+            // [13.006552,	21.32971,	20.4224677,	11.78641,	9.5256743,	5.1936522,	0.1482538,	22.4009052,	5.2247279,	0.4327351]
         },
       ]
     };
