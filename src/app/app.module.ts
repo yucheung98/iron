@@ -25,6 +25,7 @@ import { DemandComponent } from './pages/demand/demand.component';
 import { SupplyComponent } from './pages/supply/supply.component';
 import { Forecast1Component } from './pages/forecast1/forecast1.component';
 import { Forecast2Component } from './pages/forecast2/forecast2.component';
+import { PrefaceComponent } from './pages/preface/preface.component';
 
 
 
@@ -43,7 +44,8 @@ registerLocaleData(zh);
     DemandComponent,
     SupplyComponent,
     Forecast1Component,
-    Forecast2Component
+    Forecast2Component,
+    PrefaceComponent
   ],
   imports: [
     BrowserModule,

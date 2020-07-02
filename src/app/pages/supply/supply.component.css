@@ -30,11 +30,17 @@
   color: #cccccc;
 }
 .mini{
-  height:100px;
+  /*height:100px;*/
   /*width: 300px;*/
   /*margin-left: 30px;*/
   /*margin-left: 20%;*/
   /*background-color:transparent;*/
   /*margin-top: 30px;*/
   /*color: #1890ff;*/
+}
+/*.echarts{*/
+/*  height: 350px;*/
+/*}*/
+p{
+  text-indent: 25px;
 }

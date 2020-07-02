@@ -106,12 +106,26 @@
 
           <div nz-row>
             <div nz-col nzSpan="12" style="border-right:1px #e1e1e1 solid ">
-              <div class="echarts" echarts [options]="option_forecast1"></div>
+              <div class="echarts1" echarts [options]="option_forecast1"></div>
             </div>
             <div nz-col nzSpan="12">
-              <div class="echarts" echarts [options]="option_forecast2"></div>
+              <div class="echarts1" echarts [options]="option_forecast2"></div>
             </div>
           </div>
+
+          <div nz-row style="padding-left: 20px;padding-right: 20px">
+            <p>
+              基于LSTM长短期记忆神经网络对用电量进行预测，LSTM（Long Short-Term Memory）是长短期记忆网络，是一种时间递归神经
+              网络（RNN），主要是为了解决长序列训练过程中的梯度消失和梯度爆炸问题。
+            </p>
+            <p>
+              基于LSTM长短期记忆神经网络的月用电量预测模型的预测效果较好，曲线拟合程度较高。
+            </p>
+            <p>
+              在基于LSTM长短期记忆神经网络的预测模型的基础上，将输出维度调整为12个月，进行模型超参数优化，再次进行训练，实现预测未来一年的月用电量。
+            </p>
+          </div>
+
         </div>
       </div>
       <!--   成本 -->
@@ -141,7 +155,18 @@
             </div>
           </div>
 
-          <div class="echarts" echarts [options]="option_forecast3"></div>
+          <div class="echarts1" echarts [options]="option_forecast3"></div>
+
+
+          <div nz-row style="padding-left: 20px;padding-right: 20px">
+            <p>
+              预测使用一种基于集成经验模态分解(EEMD)的混合模型，有效抑制了模态混叠现象的产生，从而有效提升了预测精度。在时间序
+              列预测的分解集成框架下，除基础时间序列外，引入了与钢材产量相关的下游需求数据与宏观经济数据等外生变量，预测分解后
+              的辽宁省钢材产量。通过将钢材产量的时间序列数据分解为高频特征分量与低频特征分量，分别使用XGBOOST与LassoLars模型
+              分别预测，并将预测结果反向集成。
+            </p>
+          </div>
+
         </div>
       </div>
 

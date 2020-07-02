@@ -7,6 +7,9 @@
   /*//左边阴影 //顶部阴影 //底部阴影 //右边阴影*/
 }
 .echarts{
+  height: 200px;
+}
+.echarts1{
   height: 270px;
 }
 .gutter-box1 {
@@ -29,6 +32,9 @@
   font-size: 16px;
   color: #cccccc;
 }
-.inner-box{
-  padding-bottom: 20px;
+/*.inner-box{*/
+/*  padding-bottom: 20px;*/
+/*}*/
+p{
+  text-indent: 25px;
 }

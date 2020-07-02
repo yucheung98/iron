@@ -14,5 +14,8 @@
   -o-box-shadow:0 1px 10px rgba(0,0,0,0.1),0 0 10px rgba(0,0,0,0.1) inset;
 }
 .echarts{
-  height: 360px;
+  height: 250px;
+}
+p{
+  text-indent: 25px;
 }

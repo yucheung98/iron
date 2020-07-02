@@ -6,7 +6,7 @@
       <!--    成本-->
       <div nz-col class="gutter-row" [nzSpan]="24">
         <div class="inner-box case-content1">
-          <h2 style="text-align: center;background-color: #cccccc">辽宁省重点钢铁行业上市公司股票价格预测</h2>
+          <h2 style="text-align: center;background-color: #cccccc">辽宁省钢铁行业上市公司利润与股价趋势分析</h2>
           <div nz-row>
             <div nz-col nzSpan="8" style="border-right:1px #e1e1e1 solid ">
               <div class="gutter-box1">
@@ -72,7 +72,7 @@
               </div>
             </div>
           </div>
-          <div class="echarts" echarts [options]="option_forecast4"></div>
+          <div class="echarts1" echarts [options]="option_forecast4"></div>
         </div>
         <div nz-col nzSpan="8" style="border-right:1px #e1e1e1 solid ">
           <div  class="echarts">
@@ -95,7 +95,7 @@
               </div>
             </div>
           </div>
-          <div class="echarts" echarts [options]="option_forecast5"></div>
+          <div class="echarts1" echarts [options]="option_forecast5"></div>
         </div>
         <div nz-col nzSpan="8">
           <div  class="echarts">
@@ -118,11 +118,22 @@
               </div>
             </div>
           </div>
-          <div class="echarts" echarts [options]="option_forecast6"></div>
+          <div class="echarts1" echarts [options]="option_forecast6"></div>
         </div>
       </div>
+      <div nz-row style="padding-left: 20px;padding-right: 20px">
+        <p>
+          使用XGBOOST与LassoLars模型的集成学习方法，基于钢铁行业利润系统动力学模型从钢铁行业产能供给、需求、成本三个维度，集成所有
+          高低频相关数据，估计各因素对我省重点钢铁企业（鞍钢、本钢与凌钢）利润的贡献程度与贡献比率。通过监测各因素的变化情况，结合
+          企业用电数据信息，快速分析企业利润变化趋势，预估上市公司股价变化趋势。从而有效监测我省重点钢铁企业的经营发展状况。
+        </p>
+        <p>
+          钢铁行业利润系统动力学模型将从产能供给、需求、成本三个维度分析各影响因素对钢铁企业利润的影响，其中产能供给主要包括
+          （但不限于）：进口钢材、开工率、钢材产量；行业需求主要包括（但不限于）：白色家电、PMI新订单、出口钢材、汽车、商用车、金
+          属切削机床、水泥、房地产开发投资完成额；原材料成本主要包括（但不限于）：铁矿石、焦炭、辅料。
+        </p>
+      </div>
     </div>
-
 
   </div>
 
