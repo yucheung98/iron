@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EcoForecastComponent implements OnInit {
   option: {};
+  pageSize = 14;
   fixHeader = true;
   listOfData = [
     {

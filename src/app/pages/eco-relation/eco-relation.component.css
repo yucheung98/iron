@@ -142,3 +142,8 @@ nz-table th{
   margin-bottom: 20px;
 }
 
+.echarts{
+  margin-top: 50px;
+  margin-bottom: 40px;
+  height: 400px;
+}

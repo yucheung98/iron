@@ -11,12 +11,17 @@
 
           <div nz-col nzSpan="24">
             <div class="echarts" echarts [options]="option_GDP"></div>
+            <div nz-row style="padding-left: 40px;padding-right: 20px">
+              <p>
+                辽宁省GDP发展趋势在近三年出现明显下滑，将显著影响各区域的用电需求。
+              </p>
+            </div>
           </div>
         </div>
 
       </div>
     </div>
-    <div nz-col class="gutter-row" [nzSpan]="12">
+    <div nz-col class="gutter-row " [nzSpan]="12">
       <div class="inner-box case-content">
 
         <div nz-row style="background-color: #cccccc">
@@ -25,16 +30,16 @@
         <div nz-row  class="gutter-example">
 
           <div nz-col nzSpan="8">
-            <div class="gutter-box1 echarts" style="border-right:1px #e1e1e1 solid">
+            <div class="gutter-box1" style="border-right:1px #e1e1e1 solid">
               <div class="gutter-box-text2">
                 第一产业
               </div>
               <div class="gutter-box-text1">
-                <p *ngIf="first[8] < 0" style="color: red" ><img src="../../../assets/img/down.png" height="16"
-                                                                 width="16"/>{{first[8].toFixed(3)}}</p>
-                <p *ngIf="first[8] >= 0" style="color: limegreen"><img src="../../../assets/img/up.png" height="16"
-                                                                       width="16"/>{{first[8].toFixed(3)}}</p>
-                <!--                {{first[8].toFixed(3)}}-->
+<!--                <p *ngIf="first[8] < 0" style="color: red" ><img src="../../../assets/img/down.png" height="16"-->
+<!--                                                                 width="16"/>{{first[8].toFixed(3)}}</p>-->
+<!--                <p *ngIf="first[8] >= 0" style="color: limegreen"><img src="../../../assets/img/up.png" height="16"-->
+<!--                                                                       width="16"/>{{first[8].toFixed(3)}}</p>-->
+                {{first[8].toFixed(3)}}
               </div>
               <div>
                 <kendo-sparkline [data]="first" type="line" class="mini" [seriesColors]="seriesColors">
@@ -43,16 +48,16 @@
             </div>
           </div>
           <div nz-col nzSpan="8">
-            <div class="gutter-box1 echarts" style="border-right:1px #e1e1e1 solid">
+            <div class="gutter-box1" style="border-right:1px #e1e1e1 solid">
               <div class="gutter-box-text2">
                 第二产业
               </div>
               <div class="gutter-box-text1">
-                <p *ngIf="second[8] < 0" style="color: red"><img src="../../../assets/img/down.png" height="16"
-                                                                 width="16"/>{{second[8].toFixed(3)}}</p>
-                <p *ngIf="second[8] >= 0" style="color: limegreen"><img src="../../../assets/img/up.png" height="16"
-                                                                        width="16"/>{{second[8].toFixed(3)}}</p>
-                <!--                {{second[8].toFixed(3)}}-->
+<!--               <p *ngIf="second[8] < 0" style="color: red"><img src="../../../assets/img/down.png" height="16"-->
+<!--                                                                 width="16"/>{{second[8].toFixed(3)}}</p>-->
+<!--                <p *ngIf="second[8] >= 0" style="color: limegreen"><img src="../../../assets/img/up.png" height="16"-->
+<!--                                                                        width="16"/>{{second[8].toFixed(3)}}</p>-->
+                {{second[8].toFixed(3)}}
               </div>
               <div>
                 <kendo-sparkline [data]="second" type="line" class="mini" [seriesColors]="seriesColors">
@@ -61,16 +66,16 @@
             </div>
           </div>
           <div nz-col nzSpan="8">
-            <div class="gutter-box1 echarts">
+            <div class="gutter-box1">
               <div class="gutter-box-text2">
                 第三产业
               </div>
               <div class="gutter-box-text1">
-                <p *ngIf="third[8] < 0" style="color: red"><img src="../../../assets/img/down.png" height="16"
-                                                                width="16"/>{{third[8].toFixed(3)}}</p>
-                <p *ngIf="third[8] >= 0" style="color: limegreen"><img src="../../../assets/img/up.png" height="16"
-                                                                       width="16"/>{{third[8].toFixed(3)}}</p>
-                <!--                {{third[8].toFixed(3)}}-->
+<!--                <p *ngIf="third[8] < 0" style="color: red"><img src="../../../assets/img/down.png" height="16"-->
+<!--                                                                width="16"/>{{third[8].toFixed(3)}}</p>-->
+<!--                <p *ngIf="third[8] >= 0" style="color: limegreen"><img src="../../../assets/img/up.png" height="16"-->
+<!--                                                                       width="16"/>{{third[8].toFixed(3)}}</p>-->
+                {{third[8].toFixed(3)}}
               </div>
               <div>
                 <kendo-sparkline [data]="third" type="line" class="mini" [seriesColors]="seriesColors">
@@ -79,7 +84,11 @@
             </div>
           </div>
         </div>
-
+        <div nz-row style="padding-left: 40px;padding-right: 20px">
+          <p>
+            辽宁省三个产业增加值增速从2010年开始逐步减慢，第二产业增加值增速在2015年就达到了负值，且三个产业均在2016年出现了负增长，最近三年增速仍在低位徘徊。
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -95,6 +104,11 @@
           <div nz-col nzSpan="24">
 
             <div class="echarts" echarts [options]="option_GDP_city"></div>
+            <div nz-row style="padding-left: 40px;padding-right: 20px">
+              <p>
+                辽宁重点行政区域发展趋势较为一致，与全省GDP的发展趋势比较吻合。其中，沈阳大连占到全省经济总量一半左右，且呈现逐步扩大的趋势，说明这两个区域以外的地方经济发展可能正遭遇更大困难。
+              </p>
+            </div>
           </div>
         </div>
 
@@ -109,7 +123,7 @@
         <div nz-row class="gutter-example">
           <div nz-col nzSpan="24">
 
-            <div class="echarts" echarts [options]="option_GDP_cityRate"></div>
+            <div class="echarts1" echarts [options]="option_GDP_cityRate"></div>
           </div>
         </div>
 

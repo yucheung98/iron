@@ -5,7 +5,7 @@
       <div class="inner-box case-content">
 
         <div nz-row style="background-color: #cccccc">
-          <h1 style="text-align: center;">2019年区域发展状况的聚类分析</h1>
+          <h1 style="text-align: center;">区域发展状况的聚类评级</h1>
         </div>
         <div nz-row>
 
@@ -13,11 +13,10 @@
               #dynamicTable
               nzBordered
               [nzData]="listOfData"
-              [nzShowSizeChanger]="true"
-              [nzFrontPagination]="true"
-              [nzShowPagination]="true"
+              [(nzPageSize)]="pageSize"
+              [nzHideOnSinglePage]="true"
               [nzFooter]="'用电量单位为亿千瓦时，GDP单位为亿元，利用以上数据对区域发展状况进行“分级”，分为4类，0表示发展良好区域、1为发展较好区域、2为发展一般区域以及3表示发展较差区域'"
-              [nzScroll]="fixHeader ? { y: '200px' } : null"
+              [nzScroll]="fixHeader ? { y: '240px' } : null"
           >
             <thead>
             <tr>
@@ -66,6 +65,11 @@
           <div nz-col nzSpan="24">
 
             <div class="echarts" echarts [options]="option"></div>
+            <div nz-row style="padding-left: 40px;padding-right: 20px">
+              <p>
+                综合考虑GDP发展状况和电力生产消费情况，各重点行政区域通过K-Means聚类分析，可评级为三类发展级别，沈阳、大连为第一梯队，鞍山、本溪、营口为第二梯队，其它分别为第三第四梯队。
+              </p>
+            </div>
           </div>
         </div>
 

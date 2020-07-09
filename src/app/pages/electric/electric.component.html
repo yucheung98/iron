@@ -11,6 +11,11 @@
           <div nz-col nzSpan="24">
 
             <div class="echarts" echarts [options]="option_electric"></div>
+            <div nz-row style="padding-left: 40px;padding-right: 20px">
+              <p>
+                辽宁省的城镇户均用电量均明显高于农村户均用电量。虽然两者都有逐步增大的趋势，但城镇户均用电量增速要明显高于农村户均用电量增速，且两者差距有逐步拉大的趋势。
+              </p>
+            </div>
           </div>
         </div>
 
@@ -26,6 +31,11 @@
           <div nz-col nzSpan="24">
 
             <div class="echarts" echarts [options]="option_electric_city"></div>
+            <div nz-row style="padding-left: 40px;padding-right: 20px">
+              <p>
+                分区域来看，自2014年以来朝阳、本溪和营口的城镇与农村户均用电之比持续增长，但沈阳、鞍山和锦州这三个区域五年内呈下降趋势。这说明各区域在城镇化进度上存在差异，对各区域的用电需求也会造成影响。
+              </p>
+            </div>
           </div>
         </div>
 
@@ -44,14 +54,19 @@
 
           <div nz-col class="gutter-row" [nzSpan]="12">
             <div class="inner-box">
-              <div class="echarts" echarts [options]="option_industry"></div>
+              <div class="echarts1" echarts [options]="option_industry"></div>
             </div>
           </div>
           <div nz-col class="gutter-row" [nzSpan]="12">
             <div class="inner-box">
-              <div class="echarts" echarts [options]="option_industry_city"></div>
+              <div class="echarts1" echarts [options]="option_industry_city"></div>
             </div>
           </div>
+        </div>
+        <div nz-row style="padding-left: 40px;padding-right: 20px">
+          <p>
+            辽宁省工业电力消费占比在2014年至2016年下降较快，此后2016年到2017年变化相对平稳。但第二产业电力消费量近三年增势明显。
+          </p>
         </div>
 
       </div>
@@ -66,6 +81,11 @@
 
           <div nz-col nzSpan="24">
             <div class="echarts" echarts [options]="option_industry_city1"></div>
+            <div nz-row style="padding-left: 40px;padding-right: 20px">
+              <p>
+                沈阳、营口、鞍山和大连四座城市工业电力消费占比最多，而占比较少的三座城市分别为铁岭、阜新和丹东。
+              </p>
+            </div>
           </div>
         </div>
 

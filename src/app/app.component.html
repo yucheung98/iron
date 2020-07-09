@@ -32,20 +32,20 @@
     </li>
       <li nz-submenu nzTitle="区域模块" nzIcon="dashboard">
         <ul>
-          <li nz-menu-item nzMatchRouter (click)="newTab('区域发展总体经济情况')">
-            <a routerLink="/eco-GDP" (click)="newTab('区域发展总体经济情况')">区域发展总体经济情况</a>
+          <li nz-menu-item nzMatchRouter (click)="newTab('区域总体经济情况')">
+            <a routerLink="/eco-GDP" (click)="newTab('区域总体经济情况')">区域总体经济情况</a>
           </li>
-          <li nz-menu-item nzMatchRouter (click)="newTab('区域发展电力消费情况')">
-            <a routerLink="/eco-electric" (click)="newTab('区域发展电力消费情况')">区域发展电力消费情况</a>
+          <li nz-menu-item nzMatchRouter (click)="newTab('区域电力消费情况')">
+            <a routerLink="/eco-electric" (click)="newTab('区域电力消费情况')">区域电力消费情况</a>
           </li>
-          <li nz-menu-item nzMatchRouter (click)="newTab('区域发展能源发展情况')">
-            <a routerLink="/eco-energy" (click)="newTab('区域发展能源发展情况')">区域发展能源发展情况</a>
+          <li nz-menu-item nzMatchRouter (click)="newTab('区域能源发展情况')">
+            <a routerLink="/eco-energy" (click)="newTab('区域能源发展情况')">区域能源发展情况</a>
           </li>
-          <li nz-menu-item nzMatchRouter (click)="newTab('区域发展数据聚类与预测情况')">
-            <a routerLink="/eco-forecast" (click)="newTab('区域发展数据聚类与预测情况')">区域发展数据聚类与预测情况</a>
+          <li nz-menu-item nzMatchRouter (click)="newTab('区域发展聚类评级')">
+            <a routerLink="/eco-forecast" (click)="newTab('区域发展聚类评级')">区域发展聚类评级</a>
           </li>
-          <li nz-menu-item nzMatchRouter (click)="newTab('区域发展数据关联情况')">
-            <a routerLink="/eco-forecast-relation" (click)="newTab('区域发展数据关联情况')">区域发展数据关联情况</a>
+          <li nz-menu-item nzMatchRouter (click)="newTab('区域发展因素关联分析')">
+            <a routerLink="/eco-forecast-relation" (click)="newTab('区域发展因素关联分析')">区域发展因素关联分析</a>
           </li>
         </ul>
       </li>
@@ -93,11 +93,11 @@
             <app-supply *ngIf="tab =='供给与价格'"></app-supply>
             <app-forecast1 *ngIf="tab =='用电量与产量预测'"></app-forecast1>
             <app-forecast2 *ngIf="tab =='利润与股价趋势分析'"></app-forecast2>
-            <app-economics *ngIf="tab =='区域发展总体经济情况'"></app-economics>
-            <app-electric *ngIf="tab =='区域发展电力消费情况'"></app-electric>
-            <app-energy *ngIf="tab =='区域发展能源发展情况'"></app-energy>
-            <app-eco-forecast *ngIf="tab =='区域发展数据聚类与预测情况'"></app-eco-forecast>
-            <app-eco-relation *ngIf="tab =='区域发展数据关联情况'"></app-eco-relation>
+            <app-economics *ngIf="tab =='区域总体经济情况'"></app-economics>
+            <app-electric *ngIf="tab =='区域电力消费情况'"></app-electric>
+            <app-energy *ngIf="tab =='区域能源发展情况'"></app-energy>
+            <app-eco-forecast *ngIf="tab =='区域发展聚类评级'"></app-eco-forecast>
+            <app-eco-relation *ngIf="tab =='区域发展因素关联分析'"></app-eco-relation>
           </nz-tab>
         </nz-tabset>
       </div>

@@ -16,15 +16,14 @@
                   #dynamicTable
                   nzBordered
                   [nzData]="graph.links"
-                  [nzShowSizeChanger]="true"
-                  [nzFrontPagination]="true"
-                  [nzShowPagination]="true"
+                  [(nzPageSize)]="pageSize"
+                  [nzHideOnSinglePage]="true"
                   [nzFooter]="'A、B、C为GDP增速的低、中、高三类等级；D、E、F为居民用电量增速的低、中、高三类等级；' +
                    'G、H、I为第二产业用电量增速的低、中、高三类等级；J、K、L为绿色能源发电占比增速的低、中、高三类等级；' +
                     'M、N、O为火力发电占比增速的低、中、高三类等级；P、Q、R为风力发电占比增速的低、中、高三类等级；' +
                      'S、T、U为水力发电占比增速的低、中、高三类等级；V、W、X为太阳能发电占比增速的低、中、高三类等级；' +
                       'Y、Z、h为核能发电占比增速的低、中、高三类等级。'"
-                  [nzScroll]="fixHeader ? { y: '450px' } : null"
+                  [nzScroll]="fixHeader ? { y: '500px' } : null"
               >
                 <thead>
                 <tr>
@@ -37,8 +36,10 @@
                 <tbody>
                 <ng-template  ngFor let-data [ngForOf]="dynamicTable.data">
                   <tr>
-                    <td><a  (click)="singletableGraph(data.source )">{{ data.source }}</a></td>
-                    <td><a (click)="singletableGraph2(data.target )">{{ data.target }}</a></td>
+<!--                    <td><a  (click)="singletableGraph(data.source )">{{ data.source }}</a></td>-->
+<!--                    <td><a (click)="singletableGraph2(data.target )">{{ data.target }}</a></td>-->
+                    <td>{{ data.source }}</td>
+                    <td>{{ data.target }}</td>
                     <td>{{ data.Support }}</td>
                     <td>{{ data.Confidence }}</td>
                   </tr>
@@ -52,7 +53,11 @@
             <div class="inner-box">
 
               <div class="echarts" echarts [options]="option_table_graph"></div>
-
+              <div nz-row style="padding-left: 40px;padding-right: 20px">
+                <p>
+                  基于关联规则挖掘的Apriori算法，对影响重点行政区域发展状况评价的各个影响因素进行深度分析，发现各地区GDP低增速与第二产业用电量低增速、用户均用电量低增速、风力发电占比低增速、水力发电占比低增速有较强的关联，并且具有较强的可信度。
+                </p>
+              </div>
             </div>
           </div>
         </div>
