@@ -26,6 +26,10 @@ import { SupplyComponent } from './pages/supply/supply.component';
 import { Forecast1Component } from './pages/forecast1/forecast1.component';
 import { Forecast2Component } from './pages/forecast2/forecast2.component';
 import { PrefaceComponent } from './pages/preface/preface.component';
+import { P1Component } from './pages2/p1/p1.component';
+import { P3Component } from './pages2/p3/p3.component';
+import { P4Component } from './pages2/p4/p4.component';
+import { P2Component } from './pages2/p2/p2.component';
 
 
 
@@ -45,7 +49,11 @@ registerLocaleData(zh);
     SupplyComponent,
     Forecast1Component,
     Forecast2Component,
-    PrefaceComponent
+    PrefaceComponent,
+    P1Component,
+    P3Component,
+    P4Component,
+    P2Component
   ],
   imports: [
     BrowserModule,

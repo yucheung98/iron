@@ -36,15 +36,17 @@ export class AppComponent implements OnInit {
     console.log(window.location.href);
     const hre = window.location.href.split('/');
     console.log(hre[3]);
-    if (!hre[3]) {
-      this.tabs.push('前言');
-      this.router.navigateByUrl('/preface');
-    }
-    if (hre[3]) {
-      this.tabs.push(this.loginstatus.tab);
-      this.router.navigateByUrl(hre[3]);
-      console.log(this.tabs);
-    }
+    // if (!hre[3]) {
+    //   this.tabs.push('前言');
+    //   this.router.navigateByUrl('/preface');
+    // }
+    // if (hre[3]) {
+    //   this.tabs.push(this.loginstatus.tab);
+    //   this.router.navigateByUrl(hre[3]);
+    //   console.log(this.tabs);
+    // }
+    this.tabs.push('辽宁钢铁行业用电数据概览');
+    this.router.navigateByUrl('/p1');
   }
 
   newTab(tab: string): void {

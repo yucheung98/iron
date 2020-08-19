@@ -1,0 +1,257 @@
+<div class="gutter-example">
+  <div nz-row [nzGutter]="12">
+    <div nz-col class="gutter-row" [nzSpan]="6">
+      <div class="grid-config-card">
+        <div  nz-row  [nzGutter]="0">
+          <div  nz-col nzSpan="4" class="box-icon">
+            <img src="../../../assets/img/闪电.png" style="margin-left: 10px" height="50" width="50"/>
+          </div>
+          <div  nz-col nzSpan="20" class="box-text">
+            <p>辽宁钢铁行业<span>7月</span>用电量</p>
+            <p><span>22</span>亿千瓦时</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="6">
+      <div class="grid-config-card">
+        <div  nz-row  [nzGutter]="0">
+          <div  nz-col nzSpan="4" class="box-icon">
+            <img src="../../../assets/img/闪电.png" style="margin-left: 10px" height="50" width="50"/>
+          </div>
+          <div  nz-col nzSpan="20" class="box-text">
+            <p>辽宁钢铁行业<span>8月</span>用电量</p>
+            <p><span>23</span><img src="../../../assets/img/上升.png" style=";margin-bottom: 6px" height="28" width="25"/>亿千瓦时(预测值)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="6">
+      <div class="grid-config-card">
+        <div  nz-row  [nzGutter]="0">
+          <div  nz-col nzSpan="4" class="box-icon">
+            <img src="../../../assets/img/闪电.png" style="margin-left: 10px" height="50" width="50"/>
+          </div>
+          <div  nz-col nzSpan="20" class="box-text">
+            <p>辽宁钢铁行业<span>2019年</span>总用电量</p>
+            <p><span>254</span>亿千瓦时</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="6">
+      <div class="grid-config-card">
+        <div  nz-row  [nzGutter]="0">
+          <div  nz-col nzSpan="4" class="box-icon">
+            <img src="../../../assets/img/闪电.png" style="margin-left: 10px" height="50" width="50"/>
+          </div>
+          <div  nz-col nzSpan="20" class="box-text">
+            <p>辽宁钢铁行业<span>2020年</span>总用电量</p>
+            <p><span>260</span><img src="../../../assets/img/上升.png" style=";margin-bottom: 6px" height="28" width="25"/>亿千瓦时(预测值)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div nz-row [nzGutter]="12" class="grid-config">
+    <div nz-col class="gutter-row" [nzSpan]="12">
+        <div class="grid-config3">
+          <div class="chart-title ">
+            <p>
+              <img src="../../../assets/img/统计图.png" height="25" width="25"/>
+              辽宁钢铁行业月用电量
+            </p>
+          </div>
+          <div class="chart" echarts [options]="option1">
+          </div>
+        </div>
+        <div class="grid-config3">
+          <div class="chart-title ">
+            <p>
+              <img src="../../../assets/img/统计图.png" height="25" width="25"/>
+              辽宁钢铁行业日用电量预测
+            </p>
+          </div>
+          <div class="chart" echarts [options]="option2">
+          </div>
+        </div>
+      </div>
+
+
+    <div nz-col class="gutter-row" [nzSpan]="12">
+        <div class="grid-config3">
+          <div class="chart-title ">
+            <p>
+              <img src="../../../assets/img/统计图.png" height="25" width="25"/>
+              辽宁钢铁行业月用电量预测
+            </p>
+          </div>
+          <div class="chart" echarts [options]="option3">
+          </div>
+        </div>
+        <div class="grid-config3">
+          <div class="chart-title ">
+            <p>
+              <img src="../../../assets/img/统计图.png" height="25" width="25"/>
+              辽宁钢铁行业未来一年用电量预测
+            </p>
+          </div>
+          <div class="chart" echarts [options]="option4">
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="grid-config4">
+    <p style="font-weight: bold">基于辽宁电网<span>用电大数据</span>对未来用电量进行预测，集成了<span>ARDL</span>以及<span>LSTM</span>两种预测模型，从拟合优度来看，显著提升了用电量预测的准确性。</p>
+    <p>* ARDL称为自回归分布滞后模型，是基于自回归的拓展，加入了其他滞后项，显著提高了自回归模型的精度。 LSTM是长短期记忆网络，是一种时间递归神经网络（RNN），主要是为了解决长序列训练过程中的梯度消失和梯度爆炸问题。</p>
+  </div>
+</div>
+<!--<div nz-col class="gutter-row" [nzSpan]="6">-->
+<!--  <div class="grid-config2">-->
+<!--    <div nz-row [nzGutter]="12">-->
+<!--      <div nz-col class="gutter-row" [nzSpan]="12">-->
+<!--        <div class="grid-config-card">-->
+<!--          <div  nz-row  [nzGutter]="0">-->
+<!--            <div  nz-col nzSpan="4" class="box-icon">-->
+<!--              <img src="../../../assets/img/闪电.png" height="50" width="50"/>-->
+<!--            </div>-->
+<!--            <div  nz-col nzSpan="20" class="box-text">-->
+<!--              <p>7月用电量</p>-->
+<!--              <p><span>156</span></p>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div nz-col class="gutter-row" [nzSpan]="12">-->
+<!--        <div class="grid-config-card">-->
+<!--          <div  nz-row  [nzGutter]="0">-->
+<!--            <div  nz-col nzSpan="4" class="box-icon">-->
+<!--              <img src="../../../assets/img/闪电1.png" height="50" width="50"/>-->
+<!--            </div>-->
+<!--            <div  nz-col nzSpan="20" class="box-text">-->
+<!--              <p>8月用电量</p>-->
+<!--              <p><span>166</span><img src="../../../assets/img/上升.png" style=";margin-bottom: 10px" height="25" width="25"/></p>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div nz-row [nzGutter]="12">-->
+<!--      <div nz-col class="gutter-row" [nzSpan]="12">-->
+<!--        <div class="grid-config-card">-->
+<!--          <div  nz-row  [nzGutter]="0">-->
+<!--            <div  nz-col nzSpan="4" class="box-icon">-->
+<!--              <img src="../../../assets/img/闪电.png" height="50" width="50"/>-->
+<!--            </div>-->
+<!--            <div  nz-col nzSpan="20" class="box-text">-->
+<!--              <p>2019总用电量</p>-->
+<!--              <p><span>1566</span></p>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div nz-col class="gutter-row" [nzSpan]="12">-->
+<!--        <div class="grid-config-card">-->
+<!--          <div  nz-row  [nzGutter]="0">-->
+<!--            <div  nz-col nzSpan="4" class="box-icon">-->
+<!--              <img src="../../../assets/img/闪电1.png" height="50" width="50"/>-->
+<!--            </div>-->
+<!--            <div  nz-col nzSpan="20" class="box-text">-->
+<!--              <p>2020总用电量</p>-->
+<!--              <p><span>1666</span><img src="../../../assets/img/下降.png" style=";margin-bottom: 10px" height="25" width="25"/></p>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="danwei">-->
+<!--      <p>* 单位：亿千瓦时</p>-->
+<!--    </div>-->
+<!--    <div class="grid-config4">-->
+<!--      <p>* ARDL称为自回归分布滞后模型，是基于自回归的拓展，加入了其他滞后项，显著提高了自回归模型的精度。</p>-->
+<!--      <p>* LSTM是长短期记忆网络，是一种时间递归神经网络（RNN），主要是为了解决长序列训练过程中的梯度消失和梯度爆炸问题。</p>-->
+<!--      <p style="font-weight: bold">基于辽宁电网<span>用电大数据</span>进行对未来<span>用电量的预测</span>，集成了<span>ARDL</span>以及<span>LSTM</span>两种预测模型，显著提升了用电量预测的准确性。</p>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+<!--<div class="gutter-example">-->
+<!--  <div nz-row [nzGutter]="12">-->
+<!--    <div nz-col class="gutter-row" [nzSpan]="12">-->
+<!--      <div nz-row [nzGutter]="6">-->
+<!--        <div nz-col class="gutter-row" [nzSpan]="12">-->
+<!--          <div class="grid-config2">-->
+<!--            <div class="chart-title ">-->
+<!--              <p>-->
+<!--                <img src="../../../assets/img/统计图.png" height="25" width="25"/>-->
+<!--                辽宁钢铁行业月用电量-->
+<!--              </p>-->
+<!--            </div>-->
+<!--                    <div class="chart" echarts [options]="option1">-->
+<!--                    </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div nz-col class="gutter-row" [nzSpan]="12">-->
+<!--          <div class="grid-config2">-->
+<!--            <div class="chart-title ">-->
+<!--              <p>-->
+<!--                <img src="../../../assets/img/统计图.png" height="25" width="25"/>-->
+<!--                ARDL模型拟合效果-->
+<!--              </p>-->
+<!--            </div>-->
+<!--                    <div class="chart" echarts [options]="option2">-->
+<!--                    </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div nz-col class="gutter-row" [nzSpan]="12">-->
+<!--      <div nz-row [nzGutter]="6">-->
+<!--        <div nz-col class="gutter-row" [nzSpan]="12">-->
+<!--          <div class="grid-config2">-->
+<!--            <div class="chart-title ">-->
+<!--              <p>-->
+<!--                <img src="../../../assets/img/统计图.png" height="25" width="25"/>-->
+<!--                辽宁钢铁行业月用电量预测-->
+<!--              </p>-->
+<!--            </div>-->
+<!--                    <div class="chart" echarts [options]="option3">-->
+<!--                    </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div nz-col class="gutter-row" [nzSpan]="12">-->
+<!--          <div class="grid-config2">-->
+<!--            <div class="chart-title ">-->
+<!--              <p>-->
+<!--                <img src="../../../assets/img/统计图.png" height="25" width="25"/>-->
+<!--                辽宁钢铁行业未来一年用电量预测-->
+<!--              </p>-->
+<!--            </div>-->
+<!--                    <div class="chart" echarts [options]="option4">-->
+<!--                    </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--<div class="gutter-example">-->
+<!--  <div nz-row [nzGutter]="12">-->
+<!--    <div nz-col class="gutter-row" [nzSpan]="12">-->
+<!--      <div class="grid-config3">-->
+<!--        <img src="../../../assets/img/预测方程.png" style="margin-left: 15%" height="300px" width="68%"/>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div nz-col class="gutter-row" [nzSpan]="12">-->
+<!--      <div class="grid-config3">-->
+<!--        <p>模型优点：</p>-->
+<!--        <p>1、预测模型对数据要求简单，不需要任何外部数据。</p>-->
+<!--        <p>2、准确率高，误差较小。</p>-->
+<!--        <p>3、方法较新，有一定前沿性。</p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
